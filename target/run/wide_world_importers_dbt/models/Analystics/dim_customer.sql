@@ -65,6 +65,7 @@ SELECT
   customer.primary_contact_person_key,
   person.full_name AS primary_contact_full_name,
   person.preferred_name AS primary_contact_preferred_name,
+  person.search_name AS primary_contact_search_name,
   customer.bill_to_customer_key
 FROM dim_customer__convert AS customer
 LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`stg_dim_category` AS category
@@ -93,6 +94,9 @@ SELECT
   delivery_city_key,
   postal_city_key,
   primary_contact_person_key,
+  primary_contact_full_name,
+  primary_contact_preferred_name,
+  primary_contact_search_name,
   bill_to_customer_key
 FROM dim_customer__join;
 
