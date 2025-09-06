@@ -27,16 +27,16 @@ SELECT
   city.city_key,
   city.city_name,
   city.state_province_key,
-  state.delivier_state_province_name
+  state.state_province_name
 FROM dim_city__convert as city
-LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`stg_dim_delivier_province_state` AS state
-ON city.state_province_key = state.delivier_state_province_key
+LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`stg_dim_province_state` AS state
+ON city.state_province_key = state.state_province_key
 )
 
 SELECT
   city_key,
   city_name,
   state_province_key,
-  delivier_state_province_name
+  state_province_name
 FROM dim_city__join AS city;
 
