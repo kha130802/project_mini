@@ -1522,3 +1522,822 @@ FROM dim_city__convert;
 [0m16:12:07.421419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197BB0E3C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197BA8AB7F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197BA8AA670>]}
 [0m16:12:07.421779 [debug] [MainThread]: Flushing usage events
 [0m16:12:08.624344 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:24:14.908917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192C4FA6510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192C2E11D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192C5CF4190>]}
+
+
+============================== 16:24:14.916441 | ed6cf080-616e-43e0-bab0-0f940a3a1738 ==============================
+[0m16:24:14.916441 [info ] [MainThread]: Running with dbt=1.10.9
+[0m16:24:14.917363 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'D:\\data_warehouse_project', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt run --select stg_dim_province_state', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'empty': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'log_path': 'D:\\data_warehouse_project\\logs', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m16:24:21.476785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ed6cf080-616e-43e0-bab0-0f940a3a1738', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192C5690FC0>]}
+[0m16:24:21.550637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ed6cf080-616e-43e0-bab0-0f940a3a1738', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192E38AE7A0>]}
+[0m16:24:21.551484 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m16:24:22.595899 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m16:24:22.941608 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m16:24:22.942329 [debug] [MainThread]: Partial parsing: added file: wide_world_importers_dbt://models\Staging\stg_dim_province_state.sql
+[0m16:24:23.161244 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.staging
+- models.wide_world_importers_dbt.analytics
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+[0m16:24:23.166704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ed6cf080-616e-43e0-bab0-0f940a3a1738', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192E38D2650>]}
+[0m16:24:23.383259 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m16:24:23.386447 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m16:24:23.429431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ed6cf080-616e-43e0-bab0-0f940a3a1738', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192E393B020>]}
+[0m16:24:23.429892 [info ] [MainThread]: Found 5 models, 875 macros
+[0m16:24:23.430570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ed6cf080-616e-43e0-bab0-0f940a3a1738', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192E3A87770>]}
+[0m16:24:23.432465 [info ] [MainThread]: 
+[0m16:24:23.433043 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:24:23.433522 [info ] [MainThread]: 
+[0m16:24:23.434313 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:24:23.435464 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m16:24:23.435872 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:24:24.083717 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m16:24:24.084314 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:24:24.596577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ed6cf080-616e-43e0-bab0-0f940a3a1738', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192E4263AD0>]}
+[0m16:24:24.597339 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:24:24.651722 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.stg_dim_province_state
+[0m16:24:24.652695 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.stg_dim_province_state .... [RUN]
+[0m16:24:24.653816 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.stg_dim_province_state'
+[0m16:24:24.654366 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.stg_dim_province_state
+[0m16:24:24.663837 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.stg_dim_province_state"
+[0m16:24:24.665136 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.stg_dim_province_state
+[0m16:24:24.711450 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.stg_dim_province_state"
+[0m16:24:24.713046 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.stg_dim_province_state: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.stg_dim_province_state"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`stg_dim_province_state`
+  OPTIONS()
+  as with dim_province_state__source AS(
+SELECT *
+FROM vit-lam-data.wide_world_importers.application__state_provinces
+), dim_province_state__renamed AS(
+SELECT
+  state_province_id AS state_province_key,
+  state_province_name AS state_province_name
+FROM dim_province_state__source
+), dim_province_state__convert AS(
+SELECT
+  CAST(state_province_key AS INTEGER) AS state_province_key,
+  CAST(state_province_name AS STRING) AS state_province_name
+FROM dim_province_state__renamed
+)
+SELECT
+  state_province_key,
+  state_province_name
+FROM dim_province_state__convert;
+
+
+[0m16:24:24.713925 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:24:25.427690 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:291b0ab1-f676-4e67-96b4-fb56736d95a0&page=queryresults
+[0m16:24:25.964015 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ed6cf080-616e-43e0-bab0-0f940a3a1738', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192E3E13950>]}
+[0m16:24:25.964677 [info ] [Thread-1 (]: 1 of 1 OK created sql view model wide_world_importers_dwh.stg_dim_province_state  [[32mCREATE VIEW (0 processed)[0m in 1.31s]
+[0m16:24:25.965554 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.stg_dim_province_state
+[0m16:24:25.967114 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:24:26.006809 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:24:26.007263 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m16:24:26.007547 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m16:24:26.007813 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.stg_dim_province_state' was properly closed.
+[0m16:24:26.008134 [info ] [MainThread]: 
+[0m16:24:26.009845 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.57 seconds (2.57s).
+[0m16:24:26.010933 [debug] [MainThread]: Command end result
+[0m16:24:26.041755 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m16:24:26.045736 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m16:24:26.051672 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m16:24:26.052034 [info ] [MainThread]: 
+[0m16:24:26.052792 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:24:26.053408 [info ] [MainThread]: 
+[0m16:24:26.054052 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:24:26.055281 [debug] [MainThread]: Command `dbt run` succeeded at 16:24:26.055176 after 11.56 seconds
+[0m16:24:26.055600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192E41BFC20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192E397B390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192E397BE30>]}
+[0m16:24:26.055930 [debug] [MainThread]: Flushing usage events
+[0m16:24:28.382419 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:29:50.832673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242807BA510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242FE64DD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024281504190>]}
+
+
+============================== 16:29:50.841168 | 0d3a493e-6e81-4e87-93fc-e669e7bb2026 ==============================
+[0m16:29:50.841168 [info ] [MainThread]: Running with dbt=1.10.9
+[0m16:29:50.841940 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt run --select dim_city', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'printer_width': '80', 'empty': 'False', 'log_path': 'D:\\data_warehouse_project\\logs', 'indirect_selection': 'eager', 'profiles_dir': 'D:\\data_warehouse_project', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m16:29:56.743664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0d3a493e-6e81-4e87-93fc-e669e7bb2026', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024280EA0FC0>]}
+[0m16:29:56.802101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0d3a493e-6e81-4e87-93fc-e669e7bb2026', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002429F0CE7A0>]}
+[0m16:29:56.802827 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m16:29:57.839721 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m16:29:58.132619 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m16:29:58.133303 [debug] [MainThread]: Partial parsing: updated file: wide_world_importers_dbt://models\Analystics\dim_city.sql
+[0m16:29:58.364479 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+- models.wide_world_importers_dbt.analytics
+- models.wide_world_importers_dbt.staging
+[0m16:29:58.369973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0d3a493e-6e81-4e87-93fc-e669e7bb2026', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002429F0F2650>]}
+[0m16:29:58.610079 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m16:29:58.612909 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m16:29:58.655560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0d3a493e-6e81-4e87-93fc-e669e7bb2026', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002429F15B020>]}
+[0m16:29:58.656016 [info ] [MainThread]: Found 5 models, 875 macros
+[0m16:29:58.656644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d3a493e-6e81-4e87-93fc-e669e7bb2026', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002429F2A2350>]}
+[0m16:29:58.658220 [info ] [MainThread]: 
+[0m16:29:58.658802 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:29:58.659320 [info ] [MainThread]: 
+[0m16:29:58.659989 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:29:58.661171 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m16:29:58.661561 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:29:59.274846 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m16:29:59.275574 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:29:59.729737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d3a493e-6e81-4e87-93fc-e669e7bb2026', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002429FA83D40>]}
+[0m16:29:59.730327 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:29:59.784617 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.dim_city
+[0m16:29:59.785279 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.dim_city .................. [RUN]
+[0m16:29:59.786117 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_city'
+[0m16:29:59.786616 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.dim_city
+[0m16:29:59.796844 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_city"
+[0m16:29:59.798616 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.dim_city
+[0m16:29:59.849517 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_city"
+[0m16:29:59.850866 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.dim_city: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_city"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_city`
+  OPTIONS()
+  as WITH dim_city__source AS( 
+SELECT  
+  *
+FROM vit-lam-data.wide_world_importers.application__cities
+), dim_city__renamed AS(
+SELECT
+  city_id AS city_key,
+  city_name,
+  state_province_id AS state_province_key
+FROM dim_city__source
+), dim_city__convert AS(
+SELECT
+  CAST(city_key AS INTEGER) AS city_key,
+  CAST(city_name AS STRING) AS city_name,
+  CAST(state_province_key AS INTEGER) AS state_province_key
+FROM dim_city__renamed
+), dim_city__join AS (
+SELECT
+  city.city_key,
+  city.city_name,
+  city.state_province_key,
+  state.state_province_name
+FROM dim_city__convert as city
+LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`stg_dim_province_state` AS state
+ON city.state_province_key = state.state_province_key
+)
+SELECT
+  city_key,
+  city_name,
+  state_province_key,
+  state.state_province_name
+FROM dim_city__join AS city;
+
+
+[0m16:29:59.851408 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:30:01.304421 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:af6585ac-f03d-4fb1-971a-a86dad850537&page=queryresults
+[0m16:30:01.465188 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:af6585ac-f03d-4fb1-971a-a86dad850537&page=queryresults
+[0m16:30:01.787325 [debug] [Thread-1 (]: Database Error in model dim_city (models\Analystics\dim_city.sql)
+  Unrecognized name: state at [36:3]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_city.sql
+[0m16:30:01.789729 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0d3a493e-6e81-4e87-93fc-e669e7bb2026', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002429F776BD0>]}
+[0m16:30:01.791458 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model wide_world_importers_dwh.dim_city ......... [[31mERROR[0m in 2.00s]
+[0m16:30:01.792494 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.dim_city
+[0m16:30:01.793042 [debug] [Thread-7 (]: Marking all children of 'model.wide_world_importers_dbt.dim_city' to be skipped because of status 'error'.  Reason: Database Error in model dim_city (models\Analystics\dim_city.sql)
+  Unrecognized name: state at [36:3]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_city.sql.
+[0m16:30:01.794990 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:30:01.830168 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:30:01.830538 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m16:30:01.830774 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m16:30:01.831058 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_city' was properly closed.
+[0m16:30:01.831333 [info ] [MainThread]: 
+[0m16:30:01.831911 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.17 seconds (3.17s).
+[0m16:30:01.832845 [debug] [MainThread]: Command end result
+[0m16:30:01.867972 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m16:30:01.871205 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m16:30:01.877677 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m16:30:01.878091 [info ] [MainThread]: 
+[0m16:30:01.878742 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m16:30:01.879521 [info ] [MainThread]: 
+[0m16:30:01.880320 [error] [MainThread]: [31mFailure in model dim_city (models\Analystics\dim_city.sql)[0m
+[0m16:30:01.881139 [error] [MainThread]:   Database Error in model dim_city (models\Analystics\dim_city.sql)
+  Unrecognized name: state at [36:3]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_city.sql
+[0m16:30:01.882317 [info ] [MainThread]: 
+[0m16:30:01.882898 [info ] [MainThread]:   compiled code at target\compiled\wide_world_importers_dbt\models\Analystics\dim_city.sql
+[0m16:30:01.883314 [info ] [MainThread]: 
+[0m16:30:01.883810 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:30:01.885160 [debug] [MainThread]: Command `dbt run` failed at 16:30:01.885007 after 11.45 seconds
+[0m16:30:01.885661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002429F9EA6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002429F19BC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002429F19A670>]}
+[0m16:30:01.886074 [debug] [MainThread]: Flushing usage events
+[0m16:30:03.085591 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:31:19.979744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183D4366510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183D21E1D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183D50A4190>]}
+
+
+============================== 16:31:19.987049 | a2369c1d-0e8a-4359-83af-a621ea6eea86 ==============================
+[0m16:31:19.987049 [info ] [MainThread]: Running with dbt=1.10.9
+[0m16:31:19.987976 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt run --select stg_dim_province_state dim_city', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'empty': 'False', 'printer_width': '80', 'log_path': 'D:\\data_warehouse_project\\logs', 'indirect_selection': 'eager', 'write_json': 'True', 'static_parser': 'True', 'profiles_dir': 'D:\\data_warehouse_project'}
+[0m16:31:26.656869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a2369c1d-0e8a-4359-83af-a621ea6eea86', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183D4A40FC0>]}
+[0m16:31:26.724472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a2369c1d-0e8a-4359-83af-a621ea6eea86', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F2C6E7A0>]}
+[0m16:31:26.725693 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m16:31:27.991357 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m16:31:28.399495 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m16:31:28.400466 [debug] [MainThread]: Partial parsing: updated file: wide_world_importers_dbt://models\Analystics\dim_city.sql
+[0m16:31:28.687435 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+- models.wide_world_importers_dbt.staging
+- models.wide_world_importers_dbt.analytics
+[0m16:31:28.695098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a2369c1d-0e8a-4359-83af-a621ea6eea86', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F2C92650>]}
+[0m16:31:28.976661 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m16:31:28.980287 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m16:31:29.033204 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a2369c1d-0e8a-4359-83af-a621ea6eea86', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F2CFB020>]}
+[0m16:31:29.033871 [info ] [MainThread]: Found 5 models, 875 macros
+[0m16:31:29.034489 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a2369c1d-0e8a-4359-83af-a621ea6eea86', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F2E42350>]}
+[0m16:31:29.036063 [info ] [MainThread]: 
+[0m16:31:29.036598 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:31:29.037016 [info ] [MainThread]: 
+[0m16:31:29.037708 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:31:29.042640 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m16:31:29.043290 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:31:29.617823 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m16:31:29.618955 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:31:30.099613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a2369c1d-0e8a-4359-83af-a621ea6eea86', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F2D26B60>]}
+[0m16:31:30.100337 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:31:30.148215 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.stg_dim_province_state
+[0m16:31:30.148853 [info ] [Thread-1 (]: 1 of 2 START sql view model wide_world_importers_dwh.stg_dim_province_state .... [RUN]
+[0m16:31:30.149661 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.stg_dim_province_state'
+[0m16:31:30.150000 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.stg_dim_province_state
+[0m16:31:30.155532 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.stg_dim_province_state"
+[0m16:31:30.156433 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.stg_dim_province_state
+[0m16:31:30.189943 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.stg_dim_province_state"
+[0m16:31:30.191028 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.stg_dim_province_state: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.stg_dim_province_state"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`stg_dim_province_state`
+  OPTIONS()
+  as with dim_province_state__source AS(
+SELECT *
+FROM vit-lam-data.wide_world_importers.application__state_provinces
+), dim_province_state__renamed AS(
+SELECT
+  state_province_id AS state_province_key,
+  state_province_name AS state_province_name
+FROM dim_province_state__source
+), dim_province_state__convert AS(
+SELECT
+  CAST(state_province_key AS INTEGER) AS state_province_key,
+  CAST(state_province_name AS STRING) AS state_province_name
+FROM dim_province_state__renamed
+)
+SELECT
+  state_province_key,
+  state_province_name
+FROM dim_province_state__convert;
+
+
+[0m16:31:30.191479 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:31:30.953470 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:cbbe5b04-f1e6-497a-adde-d2ce2b0e09ad&page=queryresults
+[0m16:31:31.388070 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a2369c1d-0e8a-4359-83af-a621ea6eea86', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F32F77D0>]}
+[0m16:31:31.388722 [info ] [Thread-1 (]: 1 of 2 OK created sql view model wide_world_importers_dwh.stg_dim_province_state  [[32mCREATE VIEW (0 processed)[0m in 1.24s]
+[0m16:31:31.389620 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.stg_dim_province_state
+[0m16:31:31.390571 [debug] [Thread-2 (]: Began running node model.wide_world_importers_dbt.dim_city
+[0m16:31:31.390999 [info ] [Thread-2 (]: 2 of 2 START sql view model wide_world_importers_dwh.dim_city .................. [RUN]
+[0m16:31:31.391811 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_city'
+[0m16:31:31.392300 [debug] [Thread-2 (]: Began compiling node model.wide_world_importers_dbt.dim_city
+[0m16:31:31.395543 [debug] [Thread-2 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_city"
+[0m16:31:31.396705 [debug] [Thread-2 (]: Began executing node model.wide_world_importers_dbt.dim_city
+[0m16:31:31.399476 [debug] [Thread-2 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_city"
+[0m16:31:31.400304 [debug] [Thread-2 (]: On model.wide_world_importers_dbt.dim_city: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_city"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_city`
+  OPTIONS()
+  as WITH dim_city__source AS( 
+SELECT  
+  *
+FROM vit-lam-data.wide_world_importers.application__cities
+), 
+
+dim_city__renamed AS(
+SELECT
+  city_id AS city_key,
+  city_name,
+  state_province_id AS state_province_key
+FROM dim_city__source
+), dim_city__convert AS(
+SELECT
+  CAST(city_key AS INTEGER) AS city_key,
+  CAST(city_name AS STRING) AS city_name,
+  CAST(state_province_key AS INTEGER) AS state_province_key
+FROM dim_city__renamed
+), 
+
+dim_city__join AS (
+SELECT
+  city.city_key,
+  city.city_name,
+  city.state_province_key,
+  state.state_province_name
+FROM dim_city__convert as city
+LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`stg_dim_province_state` AS state
+ON city.state_province_key = state.state_province_key
+)
+
+SELECT
+  city_key,
+  city_name,
+  state_province_key,
+  state.state_province_name
+FROM dim_city__join AS city;
+
+
+[0m16:31:31.400696 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:31:32.448522 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:ca191b6f-f3eb-43c7-88c2-1c2745443e6b&page=queryresults
+[0m16:31:32.588102 [error] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:ca191b6f-f3eb-43c7-88c2-1c2745443e6b&page=queryresults
+[0m16:31:32.606992 [debug] [Thread-2 (]: Database Error in model dim_city (models\Analystics\dim_city.sql)
+  Unrecognized name: state at [41:3]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_city.sql
+[0m16:31:32.607522 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a2369c1d-0e8a-4359-83af-a621ea6eea86', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F357A200>]}
+[0m16:31:32.608084 [error] [Thread-2 (]: 2 of 2 ERROR creating sql view model wide_world_importers_dwh.dim_city ......... [[31mERROR[0m in 1.22s]
+[0m16:31:32.609061 [debug] [Thread-2 (]: Finished running node model.wide_world_importers_dbt.dim_city
+[0m16:31:32.609782 [debug] [Thread-7 (]: Marking all children of 'model.wide_world_importers_dbt.dim_city' to be skipped because of status 'error'.  Reason: Database Error in model dim_city (models\Analystics\dim_city.sql)
+  Unrecognized name: state at [41:3]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_city.sql.
+[0m16:31:32.612034 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:31:32.647932 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:31:32.648311 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m16:31:32.648550 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m16:31:32.648770 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.stg_dim_province_state' was properly closed.
+[0m16:31:32.648990 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_city' was properly closed.
+[0m16:31:32.649303 [info ] [MainThread]: 
+[0m16:31:32.649856 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 3.61 seconds (3.61s).
+[0m16:31:32.650902 [debug] [MainThread]: Command end result
+[0m16:31:32.686850 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m16:31:32.689529 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m16:31:32.696132 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m16:31:32.696506 [info ] [MainThread]: 
+[0m16:31:32.697111 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m16:31:32.697742 [info ] [MainThread]: 
+[0m16:31:32.698352 [error] [MainThread]: [31mFailure in model dim_city (models\Analystics\dim_city.sql)[0m
+[0m16:31:32.698952 [error] [MainThread]:   Database Error in model dim_city (models\Analystics\dim_city.sql)
+  Unrecognized name: state at [41:3]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_city.sql
+[0m16:31:32.699493 [info ] [MainThread]: 
+[0m16:31:32.700021 [info ] [MainThread]:   compiled code at target\compiled\wide_world_importers_dbt\models\Analystics\dim_city.sql
+[0m16:31:32.700572 [info ] [MainThread]: 
+[0m16:31:32.701131 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=2
+[0m16:31:32.702302 [debug] [MainThread]: Command `dbt run` failed at 16:31:32.702176 after 13.09 seconds
+[0m16:31:32.702650 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F30C98B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F3B0CC20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F36CA1D0>]}
+[0m16:31:32.702962 [debug] [MainThread]: Flushing usage events
+[0m16:31:33.851034 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:32:42.970383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028BFBD96510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028BF9C01D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028BFCAD4190>]}
+
+
+============================== 16:32:42.975175 | 43200fa4-14c7-49f5-9686-316a51cc74bf ==============================
+[0m16:32:42.975175 [info ] [MainThread]: Running with dbt=1.10.9
+[0m16:32:42.975923 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt run --select dim_city', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'False', 'quiet': 'False', 'use_experimental_parser': 'False', 'printer_width': '80', 'log_path': 'D:\\data_warehouse_project\\logs', 'indirect_selection': 'eager', 'profiles_dir': 'D:\\data_warehouse_project', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m16:32:47.185806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '43200fa4-14c7-49f5-9686-316a51cc74bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028BFC470FC0>]}
+[0m16:32:47.253633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '43200fa4-14c7-49f5-9686-316a51cc74bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B9A76E7A0>]}
+[0m16:32:47.254478 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m16:32:48.159804 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m16:32:48.347227 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m16:32:48.347802 [debug] [MainThread]: Partial parsing: updated file: wide_world_importers_dbt://models\Analystics\dim_city.sql
+[0m16:32:48.558587 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+- models.wide_world_importers_dbt.analytics
+- models.wide_world_importers_dbt.staging
+[0m16:32:48.563992 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '43200fa4-14c7-49f5-9686-316a51cc74bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B9A792650>]}
+[0m16:32:48.768040 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m16:32:48.770638 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m16:32:48.805015 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '43200fa4-14c7-49f5-9686-316a51cc74bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B9A7FB020>]}
+[0m16:32:48.805456 [info ] [MainThread]: Found 5 models, 875 macros
+[0m16:32:48.806095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '43200fa4-14c7-49f5-9686-316a51cc74bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B9A946350>]}
+[0m16:32:48.807464 [info ] [MainThread]: 
+[0m16:32:48.808019 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:32:48.808958 [info ] [MainThread]: 
+[0m16:32:48.809803 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:32:48.810925 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m16:32:48.811338 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:32:49.422305 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m16:32:49.422770 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:32:49.842979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '43200fa4-14c7-49f5-9686-316a51cc74bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B9B123D40>]}
+[0m16:32:49.844145 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:32:49.887897 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.dim_city
+[0m16:32:49.888375 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.dim_city .................. [RUN]
+[0m16:32:49.889453 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_city'
+[0m16:32:49.889756 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.dim_city
+[0m16:32:49.895863 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_city"
+[0m16:32:49.897091 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.dim_city
+[0m16:32:49.927348 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_city"
+[0m16:32:49.928374 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.dim_city: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_city"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_city`
+  OPTIONS()
+  as WITH dim_city__source AS( 
+SELECT  
+  *
+FROM vit-lam-data.wide_world_importers.application__cities
+), 
+
+dim_city__renamed AS(
+SELECT
+  city_id AS city_key,
+  city_name,
+  state_province_id AS state_province_key
+FROM dim_city__source
+), dim_city__convert AS(
+SELECT
+  CAST(city_key AS INTEGER) AS city_key,
+  CAST(city_name AS STRING) AS city_name,
+  CAST(state_province_key AS INTEGER) AS state_province_key
+FROM dim_city__renamed
+), 
+
+dim_city__join AS (
+SELECT
+  city.city_key,
+  city.city_name,
+  city.state_province_key,
+  state.state_province_name
+FROM dim_city__convert as city
+LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`stg_dim_province_state` AS state
+ON city.state_province_key = state.state_province_key
+)
+
+SELECT
+  city_key,
+  city_name,
+  state_province_key,
+  state_province_name
+FROM dim_city__join AS city;
+
+
+[0m16:32:49.928835 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:32:51.070341 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:47464eb7-d294-4174-94f9-fd053cebd89a&page=queryresults
+[0m16:32:51.600612 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '43200fa4-14c7-49f5-9686-316a51cc74bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B9AE17950>]}
+[0m16:32:51.601327 [info ] [Thread-1 (]: 1 of 1 OK created sql view model wide_world_importers_dwh.dim_city ............. [[32mCREATE VIEW (0 processed)[0m in 1.71s]
+[0m16:32:51.602341 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.dim_city
+[0m16:32:51.604164 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:32:51.640004 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:32:51.640403 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m16:32:51.640660 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m16:32:51.640905 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_city' was properly closed.
+[0m16:32:51.641285 [info ] [MainThread]: 
+[0m16:32:51.642217 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.83 seconds (2.83s).
+[0m16:32:51.643272 [debug] [MainThread]: Command end result
+[0m16:32:51.672705 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m16:32:51.675174 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m16:32:51.681915 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m16:32:51.682338 [info ] [MainThread]: 
+[0m16:32:51.682913 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:32:51.683487 [info ] [MainThread]: 
+[0m16:32:51.683960 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:32:51.684943 [debug] [MainThread]: Command `dbt run` succeeded at 16:32:51.684843 after 8.89 seconds
+[0m16:32:51.685239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B9B08BB70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B9A83BA70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028B9A83B110>]}
+[0m16:32:51.685585 [debug] [MainThread]: Flushing usage events
+[0m16:32:52.797917 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:34:34.263178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A6EECDA510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A6ECB51D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A6EFA24190>]}
+
+
+============================== 16:34:34.271623 | 221b9069-efe5-48e3-98e6-1c8a971afd3d ==============================
+[0m16:34:34.271623 [info ] [MainThread]: Running with dbt=1.10.9
+[0m16:34:34.272810 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt run --select stg_dim_delivier_province_state', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'use_experimental_parser': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'log_path': 'D:\\data_warehouse_project\\logs', 'profiles_dir': 'D:\\data_warehouse_project', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True'}
+[0m16:34:39.390890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '221b9069-efe5-48e3-98e6-1c8a971afd3d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A6EF3C0FC0>]}
+[0m16:34:39.449891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '221b9069-efe5-48e3-98e6-1c8a971afd3d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A68DCEE7A0>]}
+[0m16:34:39.450651 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m16:34:40.420270 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m16:34:40.646036 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 0 files changed.
+[0m16:34:40.646556 [debug] [MainThread]: Partial parsing: added file: wide_world_importers_dbt://models\Staging\stg_dim_delivier_province_state.sql
+[0m16:34:40.646922 [debug] [MainThread]: Partial parsing: deleted file: wide_world_importers_dbt://models\Staging\stg_dim_province_state.sql
+[0m16:34:40.867349 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.wide_world_importers_dbt.dim_city' (models\Analystics\dim_city.sql) depends on a node named 'stg_dim_province_state' which was not found
+[0m16:34:40.868901 [debug] [MainThread]: Command `dbt run` failed at 16:34:40.868730 after 6.88 seconds
+[0m16:34:40.869323 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A68DD12C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A68DD12D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A68E32AC60>]}
+[0m16:34:40.869732 [debug] [MainThread]: Flushing usage events
+[0m16:34:42.026073 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:35:21.468806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF1E9D6510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF1C841D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF1F714190>]}
+
+
+============================== 16:35:21.474523 | 4dba02ec-06dd-4027-91a8-327b786ba6b0 ==============================
+[0m16:35:21.474523 [info ] [MainThread]: Running with dbt=1.10.9
+[0m16:35:21.475792 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt run --select dim_city', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'use_experimental_parser': 'False', 'printer_width': '80', 'log_path': 'D:\\data_warehouse_project\\logs', 'indirect_selection': 'eager', 'profiles_dir': 'D:\\data_warehouse_project', 'static_parser': 'True', 'write_json': 'True'}
+[0m16:35:26.618754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4dba02ec-06dd-4027-91a8-327b786ba6b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF1F0B0FC0>]}
+[0m16:35:26.674498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4dba02ec-06dd-4027-91a8-327b786ba6b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF3D2CE7A0>]}
+[0m16:35:26.675456 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m16:35:27.638104 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m16:35:27.864279 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 1 files changed.
+[0m16:35:27.864815 [debug] [MainThread]: Partial parsing: added file: wide_world_importers_dbt://models\Staging\stg_dim_delivier_province_state.sql
+[0m16:35:27.865166 [debug] [MainThread]: Partial parsing: deleted file: wide_world_importers_dbt://models\Staging\stg_dim_province_state.sql
+[0m16:35:27.865431 [debug] [MainThread]: Partial parsing: updated file: wide_world_importers_dbt://models\Analystics\dim_city.sql
+[0m16:35:28.059544 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.wide_world_importers_dbt.dim_city' (models\Analystics\dim_city.sql) depends on a node named 'stg_dim_province_state' which was not found
+[0m16:35:28.061535 [debug] [MainThread]: Command `dbt run` failed at 16:35:28.061198 after 6.74 seconds
+[0m16:35:28.062029 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF3D2F2C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF3D2F2D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF3D90AC60>]}
+[0m16:35:28.062595 [debug] [MainThread]: Flushing usage events
+[0m16:35:29.230081 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:36:02.722110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205EB296510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205E9191D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205EBFE4190>]}
+
+
+============================== 16:36:02.728198 | b585f7fc-fb28-421e-9a2d-541ddfcade57 ==============================
+[0m16:36:02.728198 [info ] [MainThread]: Running with dbt=1.10.9
+[0m16:36:02.729275 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'D:\\data_warehouse_project', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt run --select dim_city', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'False', 'printer_width': '80', 'quiet': 'False', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'D:\\data_warehouse_project\\logs', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m16:36:06.774253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b585f7fc-fb28-421e-9a2d-541ddfcade57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205EB980FC0>]}
+[0m16:36:06.834634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b585f7fc-fb28-421e-9a2d-541ddfcade57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020589C9E7A0>]}
+[0m16:36:06.835363 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m16:36:07.733690 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m16:36:07.922462 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 1 files changed.
+[0m16:36:07.922951 [debug] [MainThread]: Partial parsing: added file: wide_world_importers_dbt://models\Staging\stg_dim_delivier_province_state.sql
+[0m16:36:07.923274 [debug] [MainThread]: Partial parsing: deleted file: wide_world_importers_dbt://models\Staging\stg_dim_province_state.sql
+[0m16:36:07.923523 [debug] [MainThread]: Partial parsing: updated file: wide_world_importers_dbt://models\Analystics\dim_city.sql
+[0m16:36:08.147026 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.staging
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+- models.wide_world_importers_dbt.analytics
+[0m16:36:08.152080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b585f7fc-fb28-421e-9a2d-541ddfcade57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020589CC2550>]}
+[0m16:36:08.350095 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m16:36:08.356251 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m16:36:08.400336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b585f7fc-fb28-421e-9a2d-541ddfcade57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020589D2B020>]}
+[0m16:36:08.400830 [info ] [MainThread]: Found 5 models, 875 macros
+[0m16:36:08.401439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b585f7fc-fb28-421e-9a2d-541ddfcade57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020589E72350>]}
+[0m16:36:08.403217 [info ] [MainThread]: 
+[0m16:36:08.403823 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:36:08.404345 [info ] [MainThread]: 
+[0m16:36:08.405078 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:36:08.406256 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m16:36:08.406995 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:36:09.005260 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m16:36:09.005920 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:36:09.503305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b585f7fc-fb28-421e-9a2d-541ddfcade57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020589D56B60>]}
+[0m16:36:09.504272 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:36:09.549912 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.dim_city
+[0m16:36:09.550497 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.dim_city .................. [RUN]
+[0m16:36:09.551412 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_city'
+[0m16:36:09.551776 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.dim_city
+[0m16:36:09.557657 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_city"
+[0m16:36:09.559079 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.dim_city
+[0m16:36:09.602435 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_city"
+[0m16:36:09.603658 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.dim_city: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_city"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_city`
+  OPTIONS()
+  as WITH dim_city__source AS( 
+SELECT  
+  *
+FROM vit-lam-data.wide_world_importers.application__cities
+), 
+
+dim_city__renamed AS(
+SELECT
+  city_id AS city_key,
+  city_name,
+  state_province_id AS state_province_key
+FROM dim_city__source
+), dim_city__convert AS(
+SELECT
+  CAST(city_key AS INTEGER) AS city_key,
+  CAST(city_name AS STRING) AS city_name,
+  CAST(state_province_key AS INTEGER) AS state_province_key
+FROM dim_city__renamed
+), 
+
+dim_city__join AS (
+SELECT
+  city.city_key,
+  city.city_name,
+  city.state_province_key,
+  state.delivier_state_province_name
+FROM dim_city__convert as city
+LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`stg_dim_delivier_province_state` AS state
+ON city.state_province_key = state.delivier_state_province_key
+)
+
+SELECT
+  city_key,
+  city_name,
+  state_province_key,
+  delivier_state_province_name
+FROM dim_city__join AS city;
+
+
+[0m16:36:09.604213 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:36:10.499852 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:f08c4179-544c-4a8e-9391-4ee619feadde&page=queryresults
+[0m16:36:10.501150 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:f08c4179-544c-4a8e-9391-4ee619feadde&page=queryresults
+[0m16:36:10.527474 [debug] [Thread-1 (]: Database Error in model dim_city (models\Analystics\dim_city.sql)
+  Not found: Table project-github-471211:wide_world_importers_dwh.stg_dim_delivier_province_state was not found in location asia-southeast1
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_city.sql
+[0m16:36:10.530232 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b585f7fc-fb28-421e-9a2d-541ddfcade57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002058A326C90>]}
+[0m16:36:10.530844 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model wide_world_importers_dwh.dim_city ......... [[31mERROR[0m in 0.98s]
+[0m16:36:10.531617 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.dim_city
+[0m16:36:10.532154 [debug] [Thread-7 (]: Marking all children of 'model.wide_world_importers_dbt.dim_city' to be skipped because of status 'error'.  Reason: Database Error in model dim_city (models\Analystics\dim_city.sql)
+  Not found: Table project-github-471211:wide_world_importers_dwh.stg_dim_delivier_province_state was not found in location asia-southeast1
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_city.sql.
+[0m16:36:10.534246 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:36:10.570305 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:36:10.570711 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m16:36:10.570959 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m16:36:10.571184 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_city' was properly closed.
+[0m16:36:10.571456 [info ] [MainThread]: 
+[0m16:36:10.572016 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.17 seconds (2.17s).
+[0m16:36:10.572985 [debug] [MainThread]: Command end result
+[0m16:36:10.606512 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m16:36:10.609158 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m16:36:10.615431 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m16:36:10.615804 [info ] [MainThread]: 
+[0m16:36:10.616390 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m16:36:10.616857 [info ] [MainThread]: 
+[0m16:36:10.617500 [error] [MainThread]: [31mFailure in model dim_city (models\Analystics\dim_city.sql)[0m
+[0m16:36:10.618158 [error] [MainThread]:   Database Error in model dim_city (models\Analystics\dim_city.sql)
+  Not found: Table project-github-471211:wide_world_importers_dwh.stg_dim_delivier_province_state was not found in location asia-southeast1
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_city.sql
+[0m16:36:10.618692 [info ] [MainThread]: 
+[0m16:36:10.619317 [info ] [MainThread]:   compiled code at target\compiled\wide_world_importers_dbt\models\Analystics\dim_city.sql
+[0m16:36:10.619813 [info ] [MainThread]: 
+[0m16:36:10.620365 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:36:10.621433 [debug] [MainThread]: Command `dbt run` failed at 16:36:10.621331 after 8.07 seconds
+[0m16:36:10.621736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002058A5B6360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020589D6F930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020589D6F6B0>]}
+[0m16:36:10.622022 [debug] [MainThread]: Flushing usage events
+[0m16:36:11.778174 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:36:40.260251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A9A7736510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A9A55A1D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A9A8474190>]}
+
+
+============================== 16:36:40.264757 | 540db46f-cea7-47d5-87bf-ece9ff24e859 ==============================
+[0m16:36:40.264757 [info ] [MainThread]: Running with dbt=1.10.9
+[0m16:36:40.266151 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'D:\\data_warehouse_project', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'empty': 'None', 'printer_width': '80', 'log_path': 'D:\\data_warehouse_project\\logs', 'indirect_selection': 'eager', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m16:36:40.296661 [info ] [MainThread]: dbt version: 1.10.9
+[0m16:36:40.297345 [info ] [MainThread]: python version: 3.13.3
+[0m16:36:40.297806 [info ] [MainThread]: python path: C:\Users\khang\AppData\Local\Programs\Python\Python313\python.exe
+[0m16:36:40.298306 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m16:36:44.331028 [info ] [MainThread]: Using profiles dir at D:\data_warehouse_project
+[0m16:36:44.331985 [info ] [MainThread]: Using profiles.yml file at D:\data_warehouse_project\profiles.yml
+[0m16:36:44.332532 [info ] [MainThread]: Using dbt_project.yml file at D:\data_warehouse_project\dbt_project.yml
+[0m16:36:44.333072 [info ] [MainThread]: adapter type: bigquery
+[0m16:36:44.333642 [info ] [MainThread]: adapter version: 1.10.1
+[0m16:36:44.439801 [info ] [MainThread]: Configuration:
+[0m16:36:44.440544 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:36:44.441266 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:36:44.441885 [info ] [MainThread]: Required dependencies:
+[0m16:36:44.442403 [debug] [MainThread]: Executing "git --help"
+[0m16:36:44.481917 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:36:44.482454 [debug] [MainThread]: STDERR: "b''"
+[0m16:36:44.482845 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:36:44.483573 [info ] [MainThread]: Connection:
+[0m16:36:44.484296 [info ] [MainThread]:   method: service-account
+[0m16:36:44.484803 [info ] [MainThread]:   database: project-github-471211
+[0m16:36:44.485304 [info ] [MainThread]:   execution_project: project-github-471211
+[0m16:36:44.485858 [info ] [MainThread]:   schema: wide_world_importers_dwh
+[0m16:36:44.486368 [info ] [MainThread]:   location: asia-southeast1
+[0m16:36:44.486856 [info ] [MainThread]:   priority: interactive
+[0m16:36:44.487294 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m16:36:44.487746 [info ] [MainThread]:   impersonate_service_account: None
+[0m16:36:44.488189 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m16:36:44.488619 [info ] [MainThread]:   job_retries: 1
+[0m16:36:44.489081 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m16:36:44.489563 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m16:36:44.489955 [info ] [MainThread]:   timeout_seconds: 300
+[0m16:36:44.490371 [info ] [MainThread]:   client_id: None
+[0m16:36:44.490823 [info ] [MainThread]:   token_uri: None
+[0m16:36:44.491155 [info ] [MainThread]:   compute_region: None
+[0m16:36:44.491597 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m16:36:44.492121 [info ] [MainThread]:   gcs_bucket: None
+[0m16:36:44.492719 [info ] [MainThread]:   dataproc_batch: None
+[0m16:36:44.493726 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m16:36:45.508890 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m16:36:45.509329 [debug] [MainThread]: On debug: select 1 as id
+[0m16:36:45.509628 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:36:46.025510 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:469dfdc8-6f4e-4903-bdd3-95ee9cdd1ed4&page=queryresults
+[0m16:36:46.499561 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:36:46.500685 [info ] [MainThread]: [32mAll checks passed![0m
+[0m16:36:46.502736 [debug] [MainThread]: Command `dbt debug` succeeded at 16:36:46.502530 after 6.43 seconds
+[0m16:36:46.503232 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:36:46.503744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A9A7D96D70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A9C6259370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A9C60F5480>]}
+[0m16:36:46.504307 [debug] [MainThread]: Flushing usage events
+[0m16:36:47.671699 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:37:10.200040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B23D816510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B23B681D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B23E564190>]}
+
+
+============================== 16:37:10.204743 | 46fd023b-341b-4ae8-8706-6a02902ea16b ==============================
+[0m16:37:10.204743 [info ] [MainThread]: Running with dbt=1.10.9
+[0m16:37:10.205970 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt run -select dim_city', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'empty': 'False', 'printer_width': '80', 'quiet': 'False', 'indirect_selection': 'eager', 'log_path': 'D:\\data_warehouse_project\\logs', 'profiles_dir': 'D:\\data_warehouse_project', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m16:37:14.153209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '46fd023b-341b-4ae8-8706-6a02902ea16b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B23DF00FC0>]}
+[0m16:37:14.214714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '46fd023b-341b-4ae8-8706-6a02902ea16b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B25C11E7A0>]}
+[0m16:37:14.215442 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m16:37:15.126795 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m16:37:15.339417 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:37:15.339821 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:37:15.345189 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.analytics
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+- models.wide_world_importers_dbt.staging
+[0m16:37:15.365383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '46fd023b-341b-4ae8-8706-6a02902ea16b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B25C142C50>]}
+[0m16:37:15.434169 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m16:37:15.436657 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m16:37:15.470935 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '46fd023b-341b-4ae8-8706-6a02902ea16b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B25C1AAE40>]}
+[0m16:37:15.471394 [info ] [MainThread]: Found 5 models, 875 macros
+[0m16:37:15.472300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '46fd023b-341b-4ae8-8706-6a02902ea16b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B25C6E6190>]}
+[0m16:37:15.472806 [warn ] [MainThread]: The selection criterion 'elect' does not match any enabled nodes
+[0m16:37:15.474177 [info ] [MainThread]: 
+[0m16:37:15.474754 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:37:15.475243 [info ] [MainThread]: 
+[0m16:37:15.475952 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:37:15.477097 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m16:37:15.477432 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:37:16.088857 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m16:37:16.089267 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:37:16.502498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '46fd023b-341b-4ae8-8706-6a02902ea16b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B25C923E10>]}
+[0m16:37:16.503052 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:37:16.544221 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.dim_city
+[0m16:37:16.544719 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.dim_city .................. [RUN]
+[0m16:37:16.545519 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_city'
+[0m16:37:16.545846 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.dim_city
+[0m16:37:16.553087 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_city"
+[0m16:37:16.553911 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.dim_city
+[0m16:37:16.583528 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_city"
+[0m16:37:16.584540 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.dim_city: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_city"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_city`
+  OPTIONS()
+  as WITH dim_city__source AS( 
+SELECT  
+  *
+FROM vit-lam-data.wide_world_importers.application__cities
+), 
+
+dim_city__renamed AS(
+SELECT
+  city_id AS city_key,
+  city_name,
+  state_province_id AS state_province_key
+FROM dim_city__source
+), dim_city__convert AS(
+SELECT
+  CAST(city_key AS INTEGER) AS city_key,
+  CAST(city_name AS STRING) AS city_name,
+  CAST(state_province_key AS INTEGER) AS state_province_key
+FROM dim_city__renamed
+), 
+
+dim_city__join AS (
+SELECT
+  city.city_key,
+  city.city_name,
+  city.state_province_key,
+  state.delivier_state_province_name
+FROM dim_city__convert as city
+LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`stg_dim_delivier_province_state` AS state
+ON city.state_province_key = state.delivier_state_province_key
+)
+
+SELECT
+  city_key,
+  city_name,
+  state_province_key,
+  delivier_state_province_name
+FROM dim_city__join AS city;
+
+
+[0m16:37:16.584984 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:37:17.164816 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:24ec2e8c-a74c-4154-8ed9-df0b145a8a7b&page=queryresults
+[0m16:37:17.166232 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:24ec2e8c-a74c-4154-8ed9-df0b145a8a7b&page=queryresults
+[0m16:37:17.180533 [debug] [Thread-1 (]: Database Error in model dim_city (models\Analystics\dim_city.sql)
+  Not found: Table project-github-471211:wide_world_importers_dwh.stg_dim_delivier_province_state was not found in location asia-southeast1
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_city.sql
+[0m16:37:17.182846 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '46fd023b-341b-4ae8-8706-6a02902ea16b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B25C656390>]}
+[0m16:37:17.183421 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model wide_world_importers_dwh.dim_city ......... [[31mERROR[0m in 0.64s]
+[0m16:37:17.184174 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.dim_city
+[0m16:37:17.184719 [debug] [Thread-7 (]: Marking all children of 'model.wide_world_importers_dbt.dim_city' to be skipped because of status 'error'.  Reason: Database Error in model dim_city (models\Analystics\dim_city.sql)
+  Not found: Table project-github-471211:wide_world_importers_dwh.stg_dim_delivier_province_state was not found in location asia-southeast1
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_city.sql.
+[0m16:37:17.186745 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:37:17.227049 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:37:17.227785 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m16:37:17.228303 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m16:37:17.228746 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_city' was properly closed.
+[0m16:37:17.229143 [info ] [MainThread]: 
+[0m16:37:17.229753 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.75 seconds (1.75s).
+[0m16:37:17.230637 [debug] [MainThread]: Command end result
+[0m16:37:17.411428 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m16:37:17.414090 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m16:37:17.420203 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m16:37:17.420604 [info ] [MainThread]: 
+[0m16:37:17.421298 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m16:37:17.421952 [info ] [MainThread]: 
+[0m16:37:17.422544 [error] [MainThread]: [31mFailure in model dim_city (models\Analystics\dim_city.sql)[0m
+[0m16:37:17.423261 [error] [MainThread]:   Database Error in model dim_city (models\Analystics\dim_city.sql)
+  Not found: Table project-github-471211:wide_world_importers_dwh.stg_dim_delivier_province_state was not found in location asia-southeast1
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_city.sql
+[0m16:37:17.423838 [info ] [MainThread]: 
+[0m16:37:17.424415 [info ] [MainThread]:   compiled code at target\compiled\wide_world_importers_dbt\models\Analystics\dim_city.sql
+[0m16:37:17.424895 [info ] [MainThread]: 
+[0m16:37:17.425530 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:37:17.426971 [debug] [MainThread]: Command `dbt run` failed at 16:37:17.426783 after 7.37 seconds
+[0m16:37:17.427347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B25C7C5F40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B25C2EE2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B25C2EE030>]}
+[0m16:37:17.427714 [debug] [MainThread]: Flushing usage events
+[0m16:37:18.559409 [debug] [MainThread]: An error was encountered while trying to flush usage events
