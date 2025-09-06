@@ -1,1 +1,1 @@
-{"_invocation_id": "9e815043-00c7-47ec-b3e0-5f93c13b8df1", "linked": {"0": {"name": "model.wide_world_importers_dbt.dim_customer", "type": "model"}}}
+{"_invocation_id": "2aea8c9d-e246-43de-9af7-3bba442b9cc2", "linked": {"0": {"name": "model.wide_world_importers_dbt.stg_dim_category", "type": "model", "succ": [2]}, "1": {"name": "model.wide_world_importers_dbt.stg_dim_buying_group", "type": "model", "succ": [2]}, "2": {"name": "model.wide_world_importers_dbt.dim_customer", "type": "model"}}}

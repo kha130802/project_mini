@@ -4,7 +4,7 @@ wide_world_importers_dbt:
   outputs:
     dev:
       project: project-github-471211
-      keyfile: conf/project-github-471211-29c865e9e4a9.json
+      keyfile: D:\profile\project-github-471211-73406d0c28f8.json
       dataset: wide_world_importers_dwh
       location: asia-southeast1
       type: bigquery
