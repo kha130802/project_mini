@@ -1,0 +1,29 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table dim_customer {
+  customer_key integer
+  customer_name string
+  created_at timestamp
+}
+
+Table dim_product {
+  product_key integer [primary key]
+  product_name string
+}
+
+Table fact_sales {
+  order_sales_key integer [primary key]
+  title varchar
+  body text [note: 'Content of the post']
+  user_id integer [not null]
+  status varchar
+  created_at timestamp
+  product_key int
+  customer_key int
+}
+
+
+Ref: fact_sales.product_key > dim_product.product_key
+
+Ref: fact_sales.customer_key > dim_customer.customer_key
