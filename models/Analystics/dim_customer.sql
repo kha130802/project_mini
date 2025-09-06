@@ -59,6 +59,8 @@ SELECT
   city.state_province_key AS postal_state_province_key,
   city.state_province_name AS postal_state_province_name,
   customer.primary_contact_person_key,
+  person.full_name AS primary_contact_full_name,
+  person.preferred_name AS primary_contact_preferred_name,
   customer.bill_to_customer_key
 FROM dim_customer__convert AS customer
 LEFT JOIN {{ref('stg_dim_category')}} AS category
@@ -67,6 +69,9 @@ LEFT JOIN {{ref('stg_dim_buying_group')}} AS buying_group
 ON customer.customer_buying_group_key = buying_group.buying_group_key
 LEFT JOIN {{ref('dim_city')}} AS city
 ON customer.delivery_city_key = city.city_key
+LEFT JOIN {{ref('stg_dim_person')}} AS person
+ON customer.primary_contact_person_key = person.person_key
+
 )
 SELECT 
   customer_key,
