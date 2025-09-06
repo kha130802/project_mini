@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "project-github-471211",
+  "private_key_id": "29c865e9e4a99d73ef043f5ee106703516a29a29",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC1aWJ61bIJuZBU\nz17RDbPRiEdyONzPxzpM/RE4jK7xaMsL6d0jXc6xcvc218oEeM7fvCxEggbYZ2UC\n8WM9BwHsjzGr74siYxpHzJchEpIE5jjt4U2t85KS6gBxWBggivGWtRhwZJ9YqtrF\nCN9DPZx1Qu6q8hQbJwyL7FidGD7paXxrDVEPTcVZSt97X0YZaV6zoclZl5lvs9Mg\nBXsfXZoSpiiDuSbyv+nENQMzJefr4ydxj33sij70I0+z/Jf5VWbfD6ikkQgpNroW\nY/0f/T0WoCxE2X3/yM1PFWF8hInLa3dMUXbYf5tpxRxCl2+0izIDv1pJGE4XVnFW\nF44XVQ8LAgMBAAECggEAAX6KkPV1VSQsqVjYm0M6zHU2wBzyIK9aQ8EVOmXaQ7h3\nwl4ySUogBjvVXSPI5mGHtAsXmEGJRJC8IcU9lTFGFZ3rrFK5pCu0eeFDC22HkLfE\nF0gy/MWpWuwc2yd9HLjYRZlcnVcO2Er2qLHVLkzHHvt7/iImrT8/Q2B2gxDB5T1K\n0VZqNq+7e9kP3mdKqZwymPOjkMRe7fyPtmXK0yn6UyWDpxnoMFsqabSHK7IviAFM\n+xHuRn9Y5ydOAh2AELqiaEGpu2h+OQMoM62lGWDGRtgIjDHbg+y/0in8Uhrlp4nH\niTuGBoQgyHNlLEcKbhKmasQHWjFz0MWFM3HxZfVK7QKBgQDZPXZFDU4r/rWInJ58\ng9EH+5o4Qbz35a9xwGYVBXg3scol4XZd935T5JIMhQA6lQFpnpGTjudxumggd6Q7\nIPBe6diuqvrfO/tje4o8AIlcBQ9gZJ5wpSL6QtXeoD9Oz1dWHpupvjBUGgWz+zXr\nsfjCJV75ekkokGeJNLuD+ST+BQKBgQDVx3F67WU9FHTAoz3K0QSZg1unWNo4uZn7\nRwo644iFfaBGUEV+Kr9Iy4KeDYiaM3lXN31RJccgc2iX6xdjS+5A1kcvNkJRoMgA\nS7p7ewmAWby2lfsrfcXL+cQkXlc07fZgZvvI0OQKu2PnNX8OWXl3Vom8x8nY1ZLX\njItMegRVzwKBgQCIgkS1c3zxzGaKZ9B3ceWCXKo2O6jhJaWvlzUOdJdsd/4M+7aD\nqafqU7EqyNCx/zwaAJh93si1AGu6KzQ6K6KgIdYVPD/U0z5O7yyYM8Yc2tkku1WM\nd1iZZjI6aPwfK883wJgUe/ymfIuk43CooPcuGImrvxoFsWg+IbLLZV3HeQKBgQCX\n4vsyjqaGThlhoNnPVtBAzb552Lw630uS53dSPcUKqyYLrw6gxHhhnQ4xg4YRoQ7O\nM8Oauw+Oc9DVVxen2hPuBxBOb+uQmX5gD23wO4uVoKxewZLR5Kt67/s2p7yoA4Yw\nGhs8I4ZSRa+GX1Dlfha5/kcgVIaJw7xv3xA9hte7qwKBgERHCtz7t56C36MxBt6r\nr6W+04fKj8Q0jh+D+wSa2RkDrn7BKv/i2Y1GYNokf5syBUmb+J4fKThhay5K5KG2\nhkSnheSSYZu2yhnTvPjlVlI71N9idnhIDk03iim5Kq/j6PLbhW6RVk6IxZF0s+OP\nz930gOVa0ANzZxvWmpIl6V48\n-----END PRIVATE KEY-----\n",
+  "client_email": "mini-project-datawarehouse@project-github-471211.iam.gserviceaccount.com",
+  "client_id": "118088914339613862568",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mini-project-datawarehouse%40project-github-471211.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
