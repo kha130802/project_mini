@@ -27,6 +27,27 @@ SELECT
 FROM dim_city__convert as city
 LEFT JOIN {{ref('stg_dim_province_state')}} AS state
 ON city.state_province_key = state.state_province_key
+), dim_city_undefined__record AS(
+  SELECT
+    city_key,
+    city_name,
+    state_province_key,
+    state_province_name
+  FROM dim_city__join
+
+  UNION ALL
+  SELECT
+    0 AS city_key,
+    'Undefined' AS city_name,
+    0 AS state_province_key,
+    'Undefined' AS state_province_name
+
+  UNION ALL
+  SELECT
+    -1 AS city_key,
+    'Invalid' AS city_name,
+    -1 AS state_province_key,
+    'Invalid' AS state_province_name
 )
 
 SELECT
@@ -34,4 +55,4 @@ SELECT
   city_name,
   state_province_key,
   state_province_name
-FROM dim_city__join AS city
+FROM dim_city_undefined__record AS city
