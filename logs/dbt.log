@@ -9677,3 +9677,1731 @@ FROM dim_product__renamed;
 [0m10:28:13.882005 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C4B214F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C46CEDF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C46CF070>]}
 [0m10:28:13.882474 [debug] [MainThread]: Flushing usage events
 [0m10:28:15.077384 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:30:31.992932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C140E2510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C11F51D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C14E34190>]}
+
+
+============================== 19:30:32.003909 | 8b1e602f-65fa-4fcd-8537-3fef2924ae80 ==============================
+[0m19:30:32.003909 [info ] [MainThread]: Running with dbt=1.10.9
+[0m19:30:32.005507 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt run --select dim_product', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'empty': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'log_path': 'D:\\data_warehouse_project\\logs', 'profiles_dir': 'D:\\data_warehouse_project', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True'}
+[0m19:30:44.657387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8b1e602f-65fa-4fcd-8537-3fef2924ae80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C147D0FC0>]}
+[0m19:30:44.726357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8b1e602f-65fa-4fcd-8537-3fef2924ae80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C329FE7A0>]}
+[0m19:30:44.727302 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m19:30:46.463192 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m19:30:52.252586 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:30:52.253247 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:30:52.261775 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.analytics
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+- models.wide_world_importers_dbt.staging
+[0m19:30:52.308938 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8b1e602f-65fa-4fcd-8537-3fef2924ae80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C32A22C50>]}
+[0m19:30:52.451523 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m19:30:52.488204 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m19:30:52.575191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8b1e602f-65fa-4fcd-8537-3fef2924ae80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C32A8B020>]}
+[0m19:30:52.576197 [info ] [MainThread]: Found 7 models, 875 macros
+[0m19:30:52.577274 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8b1e602f-65fa-4fcd-8537-3fef2924ae80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C32FCADD0>]}
+[0m19:30:52.580381 [info ] [MainThread]: 
+[0m19:30:52.581291 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:30:52.582246 [info ] [MainThread]: 
+[0m19:30:52.587489 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m19:30:52.598382 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m19:30:52.599451 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:30:53.364622 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m19:30:53.365344 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:30:53.853961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8b1e602f-65fa-4fcd-8537-3fef2924ae80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C332113D0>]}
+[0m19:30:53.855002 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:30:53.929170 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.dim_product
+[0m19:30:53.930136 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.dim_product ............... [RUN]
+[0m19:30:53.931669 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_product'
+[0m19:30:53.932392 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.dim_product
+[0m19:30:53.948845 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_product"
+[0m19:30:53.950978 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.dim_product
+[0m19:30:54.003384 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_product"
+[0m19:30:54.004751 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_product"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_product`
+  OPTIONS()
+  as WITH dim_product__resource AS (
+  SELECT 
+    *
+  FROM vit-lam-data.wide_world_importers.warehouse__stock_items
+), 
+
+dim_product__renamed AS (
+  SELECT 
+    stock_item_id AS product_key,
+    stock_item_name AS product_name,
+    brand AS product_brand,
+    size AS product_size,
+    lead_time_days AS product_lead_time,
+    quantity_per_outer AS product_quantity_per_outer,
+    is_chiller_stock AS product_is_chiller_stock,
+    tax_rate AS product_tax_rate,
+    unit_price AS product_unit_price,
+    recommended_retail_price AS product_recommended_retail_price,
+    typical_weight_per_unit AS product_typical_weight_per_unit,
+    marketing_comments AS product_marketing_comments,
+    internal_comments AS product_internal_comments,
+    custom_fields AS product_custom_fields,
+    tags AS product_tags,
+    search_details AS product_search_details,
+    last_edited_by AS producT_last_edited_by,
+    supplier_id AS supplier_key,
+    color_id AS color_key,
+    unit_price AS product_price,
+    recommended_retail_price AS product_rrp,
+    typical_weight_per_unit AS product_weight,
+    marketing_comments AS product_description,
+    custom_fields AS product_custom_fields,
+    tags AS product_tags,
+    search_details AS product_search_details
+  FROM dim_product__resource
+)
+SELECT 
+  * 
+FROM dim_product__renamed;
+
+
+[0m19:30:54.006102 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:30:55.927446 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:0ed77972-e374-4308-85b7-b472ddf28953&page=queryresults
+[0m19:30:56.152638 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:0ed77972-e374-4308-85b7-b472ddf28953&page=queryresults
+[0m19:30:56.321638 [debug] [Thread-1 (]: Database Error in model dim_product (models\Analystics\dim_product.sql)
+  CREATE VIEW has columns with duplicate name product_custom_fields at [6:6]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m19:30:56.325951 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8b1e602f-65fa-4fcd-8537-3fef2924ae80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C32F71B50>]}
+[0m19:30:56.327607 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model wide_world_importers_dwh.dim_product ...... [[31mERROR[0m in 2.39s]
+[0m19:30:56.328972 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.dim_product
+[0m19:30:56.329723 [debug] [Thread-7 (]: Marking all children of 'model.wide_world_importers_dbt.dim_product' to be skipped because of status 'error'.  Reason: Database Error in model dim_product (models\Analystics\dim_product.sql)
+  CREATE VIEW has columns with duplicate name product_custom_fields at [6:6]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql.
+[0m19:30:56.331949 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:30:56.382459 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:30:56.382901 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m19:30:56.383188 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m19:30:56.383465 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_product' was properly closed.
+[0m19:30:56.384146 [info ] [MainThread]: 
+[0m19:30:56.384723 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.80 seconds (3.80s).
+[0m19:30:56.385588 [debug] [MainThread]: Command end result
+[0m19:30:56.618440 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m19:30:56.622446 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m19:30:56.629838 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m19:30:56.630328 [info ] [MainThread]: 
+[0m19:30:56.630972 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m19:30:56.631525 [info ] [MainThread]: 
+[0m19:30:56.632047 [error] [MainThread]: [31mFailure in model dim_product (models\Analystics\dim_product.sql)[0m
+[0m19:30:56.632557 [error] [MainThread]:   Database Error in model dim_product (models\Analystics\dim_product.sql)
+  CREATE VIEW has columns with duplicate name product_custom_fields at [6:6]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m19:30:56.633025 [info ] [MainThread]: 
+[0m19:30:56.633653 [info ] [MainThread]:   compiled code at target\compiled\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m19:30:56.634248 [info ] [MainThread]: 
+[0m19:30:56.634870 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m19:30:56.636397 [debug] [MainThread]: Command `dbt run` failed at 19:30:56.636218 after 24.92 seconds
+[0m19:30:56.637016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C32F154F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C32BCEDF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C32BCF070>]}
+[0m19:30:56.637447 [debug] [MainThread]: Flushing usage events
+[0m19:31:00.056181 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:35:29.891552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED21A66510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED1F8D1D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED227A4190>]}
+
+
+============================== 19:35:29.898419 | 0e8e4c8a-50a4-4aaa-ad10-61a8f169b3b5 ==============================
+[0m19:35:29.898419 [info ] [MainThread]: Running with dbt=1.10.9
+[0m19:35:29.899114 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt run --select dim_product', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'False', 'quiet': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'log_path': 'D:\\data_warehouse_project\\logs', 'profiles_dir': 'D:\\data_warehouse_project', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m19:35:35.549041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0e8e4c8a-50a4-4aaa-ad10-61a8f169b3b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED22140FC0>]}
+[0m19:35:35.621141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0e8e4c8a-50a4-4aaa-ad10-61a8f169b3b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED4037E7A0>]}
+[0m19:35:35.622428 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m19:35:36.685956 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m19:35:36.916073 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m19:35:36.916713 [debug] [MainThread]: Partial parsing: updated file: wide_world_importers_dbt://models\Analystics\dim_product.sql
+[0m19:35:37.171457 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.analytics
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+- models.wide_world_importers_dbt.staging
+[0m19:35:37.178178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0e8e4c8a-50a4-4aaa-ad10-61a8f169b3b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED403A2550>]}
+[0m19:35:37.410066 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m19:35:37.414744 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m19:35:37.454085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0e8e4c8a-50a4-4aaa-ad10-61a8f169b3b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED4040B020>]}
+[0m19:35:37.454707 [info ] [MainThread]: Found 7 models, 875 macros
+[0m19:35:37.455667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0e8e4c8a-50a4-4aaa-ad10-61a8f169b3b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED405574D0>]}
+[0m19:35:37.457476 [info ] [MainThread]: 
+[0m19:35:37.458072 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:35:37.458501 [info ] [MainThread]: 
+[0m19:35:37.459176 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m19:35:37.460229 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m19:35:37.460505 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:35:38.200049 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m19:35:38.200766 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:35:38.697740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0e8e4c8a-50a4-4aaa-ad10-61a8f169b3b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED40B0F6C0>]}
+[0m19:35:38.698465 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:35:38.749774 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.dim_product
+[0m19:35:38.750393 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.dim_product ............... [RUN]
+[0m19:35:38.751113 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_product'
+[0m19:35:38.751473 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.dim_product
+[0m19:35:38.759009 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_product"
+[0m19:35:38.759964 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.dim_product
+[0m19:35:38.794596 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_product"
+[0m19:35:38.796045 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_product"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_product`
+  OPTIONS()
+  as WITH dim_product__resource AS (
+  SELECT 
+    *
+  FROM vit-lam-data.wide_world_importers.warehouse__stock_items
+), 
+
+dim_product__renamed AS (
+  SELECT 
+    stock_item_id AS product_key,
+    stock_item_name AS product_name,
+    brand AS product_brand,
+    size AS product_size,
+    lead_time_days AS product_lead_time,
+    quantity_per_outer AS product_quantity_per_outer,
+    is_chiller_stock AS product_is_chiller_stock,
+    tax_rate AS product_tax_rate,
+    unit_price AS product_unit_price,
+    recommended_retail_price AS product_recommended_retail_price,
+    typical_weight_per_unit AS product_typical_weight_per_unit,
+    marketing_comments AS product_marketing_comments,
+    internal_comments AS product_internal_comments,
+    custom_fields AS product_custom_fields,
+    tags AS product_tags,
+    search_details AS product_search_details,
+    last_edited_by AS producT_last_edited_by,
+    supplier_id AS supplier_key,
+    color_id AS color_key,
+    unit_price AS product_price,
+    recommended_retail_price AS product_rrp,
+    typical_weight_per_unit AS product_weight,
+    marketing_comments AS product_description,
+    tags AS product_tags,
+    search_details AS product_search_details
+  FROM dim_product__resource
+)
+SELECT 
+  * 
+FROM dim_product__renamed;
+
+
+[0m19:35:38.796756 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:35:40.744871 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:01f1e5de-8437-4fbc-ae66-650f1f420c37&page=queryresults
+[0m19:35:40.949637 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:01f1e5de-8437-4fbc-ae66-650f1f420c37&page=queryresults
+[0m19:35:40.981142 [debug] [Thread-1 (]: Database Error in model dim_product (models\Analystics\dim_product.sql)
+  CREATE VIEW has columns with duplicate name product_tags at [6:6]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m19:35:40.983939 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e8e4c8a-50a4-4aaa-ad10-61a8f169b3b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED40A12C90>]}
+[0m19:35:40.984537 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model wide_world_importers_dwh.dim_product ...... [[31mERROR[0m in 2.23s]
+[0m19:35:40.985763 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.dim_product
+[0m19:35:40.986395 [debug] [Thread-7 (]: Marking all children of 'model.wide_world_importers_dbt.dim_product' to be skipped because of status 'error'.  Reason: Database Error in model dim_product (models\Analystics\dim_product.sql)
+  CREATE VIEW has columns with duplicate name product_tags at [6:6]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql.
+[0m19:35:40.988488 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:35:41.029942 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:35:41.030326 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m19:35:41.030583 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m19:35:41.030799 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_product' was properly closed.
+[0m19:35:41.031071 [info ] [MainThread]: 
+[0m19:35:41.031690 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.57 seconds (3.57s).
+[0m19:35:41.032941 [debug] [MainThread]: Command end result
+[0m19:35:41.079018 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m19:35:41.081470 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m19:35:41.087087 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m19:35:41.087649 [info ] [MainThread]: 
+[0m19:35:41.088428 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m19:35:41.089578 [info ] [MainThread]: 
+[0m19:35:41.090453 [error] [MainThread]: [31mFailure in model dim_product (models\Analystics\dim_product.sql)[0m
+[0m19:35:41.091248 [error] [MainThread]:   Database Error in model dim_product (models\Analystics\dim_product.sql)
+  CREATE VIEW has columns with duplicate name product_tags at [6:6]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m19:35:41.091906 [info ] [MainThread]: 
+[0m19:35:41.092509 [info ] [MainThread]:   compiled code at target\compiled\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m19:35:41.093068 [info ] [MainThread]: 
+[0m19:35:41.093734 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m19:35:41.095629 [debug] [MainThread]: Command `dbt run` failed at 19:35:41.095415 after 11.41 seconds
+[0m19:35:41.096099 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED40CA6360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED40449D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED40449DB0>]}
+[0m19:35:41.096584 [debug] [MainThread]: Flushing usage events
+[0m19:35:47.714713 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:36:24.976669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DF83BA6510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DFFFDF1D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DF848E4190>]}
+
+
+============================== 19:36:24.981115 | c4876a9c-acde-4225-ac26-04e1e104054f ==============================
+[0m19:36:24.981115 [info ] [MainThread]: Running with dbt=1.10.9
+[0m19:36:24.981878 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt run --select dim_product', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'log_path': 'D:\\data_warehouse_project\\logs', 'indirect_selection': 'eager', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': 'D:\\data_warehouse_project'}
+[0m19:36:29.240646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c4876a9c-acde-4225-ac26-04e1e104054f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DF84280FC0>]}
+[0m19:36:29.306588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c4876a9c-acde-4225-ac26-04e1e104054f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DFA24FE7A0>]}
+[0m19:36:29.307589 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m19:36:30.359215 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m19:36:30.607457 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m19:36:30.607980 [debug] [MainThread]: Partial parsing: updated file: wide_world_importers_dbt://models\Analystics\dim_product.sql
+[0m19:36:30.869591 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+- models.wide_world_importers_dbt.staging
+- models.wide_world_importers_dbt.analytics
+[0m19:36:30.875527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c4876a9c-acde-4225-ac26-04e1e104054f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DFA2522550>]}
+[0m19:36:31.114037 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m19:36:31.116419 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m19:36:31.148502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c4876a9c-acde-4225-ac26-04e1e104054f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DFA258B020>]}
+[0m19:36:31.149127 [info ] [MainThread]: Found 7 models, 875 macros
+[0m19:36:31.149806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c4876a9c-acde-4225-ac26-04e1e104054f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DFA26D74D0>]}
+[0m19:36:31.151324 [info ] [MainThread]: 
+[0m19:36:31.151816 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:36:31.152267 [info ] [MainThread]: 
+[0m19:36:31.152820 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m19:36:31.153893 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m19:36:31.154194 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:36:31.854042 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m19:36:31.855040 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:36:32.357732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c4876a9c-acde-4225-ac26-04e1e104054f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DFA2C8F6C0>]}
+[0m19:36:32.358380 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:36:32.408679 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.dim_product
+[0m19:36:32.409381 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.dim_product ............... [RUN]
+[0m19:36:32.410380 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_product'
+[0m19:36:32.410988 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.dim_product
+[0m19:36:32.421341 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_product"
+[0m19:36:32.423368 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.dim_product
+[0m19:36:32.460638 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_product"
+[0m19:36:32.461922 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_product"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_product`
+  OPTIONS()
+  as WITH dim_product__resource AS (
+  SELECT 
+    *
+  FROM vit-lam-data.wide_world_importers.warehouse__stock_items
+), 
+
+dim_product__renamed AS (
+  SELECT 
+    stock_item_id AS product_key,
+    stock_item_name AS product_name,
+    brand AS product_brand,
+    size AS product_size,
+    lead_time_days AS product_lead_time,
+    quantity_per_outer AS product_quantity_per_outer,
+    is_chiller_stock AS product_is_chiller_stock,
+    tax_rate AS product_tax_rate,
+    unit_price AS product_unit_price,
+    recommended_retail_price AS product_recommended_retail_price,
+    typical_weight_per_unit AS product_typical_weight_per_unit,
+    marketing_comments AS product_marketing_comments,
+    internal_comments AS product_internal_comments,
+    custom_fields AS product_custom_fields,
+    tags AS product_tags,
+    search_details AS product_search_details,
+    last_edited_by AS producT_last_edited_by,
+    supplier_id AS supplier_key,
+    color_id AS color_key,
+    unit_price AS product_price,
+    recommended_retail_price AS product_rrp,
+    typical_weight_per_unit AS product_weight,
+    marketing_comments AS product_description,
+  FROM dim_product__resource
+)
+SELECT 
+  * 
+FROM dim_product__renamed;
+
+
+[0m19:36:32.462608 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:36:34.401991 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:8c28a36f-4e9d-47dd-ab44-fac8019674f7&page=queryresults
+[0m19:36:38.448510 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c4876a9c-acde-4225-ac26-04e1e104054f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DFA2B47C50>]}
+[0m19:36:38.449292 [info ] [Thread-1 (]: 1 of 1 OK created sql view model wide_world_importers_dwh.dim_product .......... [[32mCREATE VIEW (0 processed)[0m in 6.04s]
+[0m19:36:38.450329 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.dim_product
+[0m19:36:38.452041 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:36:38.490986 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:36:38.491362 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m19:36:38.491620 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m19:36:38.491848 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_product' was properly closed.
+[0m19:36:38.492118 [info ] [MainThread]: 
+[0m19:36:38.492609 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 7.34 seconds (7.34s).
+[0m19:36:38.493718 [debug] [MainThread]: Command end result
+[0m19:36:38.532207 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m19:36:38.535137 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m19:36:38.543781 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m19:36:38.544339 [info ] [MainThread]: 
+[0m19:36:38.545014 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:36:38.545667 [info ] [MainThread]: 
+[0m19:36:38.546552 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m19:36:38.548383 [debug] [MainThread]: Command `dbt run` succeeded at 19:36:38.548183 after 13.71 seconds
+[0m19:36:38.549001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DFA2E262B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DFA25CE670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DFA25CFED0>]}
+[0m19:36:38.549605 [debug] [MainThread]: Flushing usage events
+[0m19:36:39.829411 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:37:58.531815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002891C776510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002891A60DD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002891D4B4190>]}
+
+
+============================== 19:37:58.537770 | a1cbe3ad-e2ea-4635-949b-fba17f694895 ==============================
+[0m19:37:58.537770 [info ] [MainThread]: Running with dbt=1.10.9
+[0m19:37:58.539251 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt run --select dim_product', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'empty': 'False', 'log_cache_events': 'False', 'quiet': 'False', 'log_path': 'D:\\data_warehouse_project\\logs', 'indirect_selection': 'eager', 'profiles_dir': 'D:\\data_warehouse_project', 'static_parser': 'True', 'write_json': 'True'}
+[0m19:38:02.745044 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a1cbe3ad-e2ea-4635-949b-fba17f694895', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002891CE40FC0>]}
+[0m19:38:02.815746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a1cbe3ad-e2ea-4635-949b-fba17f694895', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002893B07E7A0>]}
+[0m19:38:02.816459 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m19:38:03.842445 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m19:38:04.069614 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m19:38:04.070288 [debug] [MainThread]: Partial parsing: updated file: wide_world_importers_dbt://models\Analystics\dim_product.sql
+[0m19:38:04.325355 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+- models.wide_world_importers_dbt.staging
+- models.wide_world_importers_dbt.analytics
+[0m19:38:04.331560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a1cbe3ad-e2ea-4635-949b-fba17f694895', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002893B0A2550>]}
+[0m19:38:04.587028 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m19:38:04.589884 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m19:38:04.620030 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a1cbe3ad-e2ea-4635-949b-fba17f694895', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002893B10B020>]}
+[0m19:38:04.620645 [info ] [MainThread]: Found 7 models, 875 macros
+[0m19:38:04.621377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a1cbe3ad-e2ea-4635-949b-fba17f694895', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002893B2534D0>]}
+[0m19:38:04.623624 [info ] [MainThread]: 
+[0m19:38:04.624344 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:38:04.624823 [info ] [MainThread]: 
+[0m19:38:04.625407 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m19:38:04.626517 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m19:38:04.627053 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:38:05.310799 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m19:38:05.311322 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:38:05.854863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a1cbe3ad-e2ea-4635-949b-fba17f694895', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002893B80F6C0>]}
+[0m19:38:05.856312 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:38:05.916109 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.dim_product
+[0m19:38:05.916880 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.dim_product ............... [RUN]
+[0m19:38:05.917856 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_product'
+[0m19:38:05.918414 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.dim_product
+[0m19:38:05.930094 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_product"
+[0m19:38:05.931756 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.dim_product
+[0m19:38:05.970725 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_product"
+[0m19:38:05.972335 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_product"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_product`
+  OPTIONS()
+  as WITH dim_product__resource AS (
+  SELECT 
+    *
+  FROM vit-lam-data.wide_world_importers.warehouse__stock_items
+), 
+
+dim_product__renamed AS (
+  SELECT 
+    stock_item_id AS product_key,
+    stock_item_name AS product_name,
+    brand AS product_brand,
+    size AS product_size,
+    lead_time_days AS product_lead_time,
+    quantity_per_outer AS product_quantity_per_outer,
+    is_chiller_stock AS product_is_chiller_stock,
+    tax_rate AS product_tax_rate,
+    unit_price AS product_unit_price,
+    recommended_retail_price AS product_recommended_retail_price,
+    typical_weight_per_unit AS product_typical_weight_per_unit,
+    marketing_comments AS product_marketing_comments,
+    internal_comments AS product_internal_comments,
+    custom_fields AS product_custom_fields,
+    tags AS product_tags,
+    search_details AS product_search_details,
+    last_edited_by AS producT_last_edited_by,
+    supplier_id AS supplier_key,
+    color_id AS color_key,
+    unit_price AS product_price,
+    recommended_retail_price AS product_rrp,
+    typical_weight_per_unit AS product_weight,
+    marketing_comments AS product_description,
+  FROM dim_product__resource
+),
+dim_product_convert__boolean AS (
+  SELECT 
+    *, 
+    CASE 
+      WHEN product_is_chiller_stock IS TRUE THEN 'on_product_is_chiller_stock' 
+      WHEN product_is_chiller_stock IS FALSE THEN 'off_product_is_chiller_stock' 
+      ELSE 'unknown_product_is_chiller_stock' 
+    END AS product_is_chiller_stock_flag
+  FROM dim_product__renamed
+)
+SELECT 
+  * 
+FROM dim_product_convert__boolean;
+
+
+[0m19:38:05.972940 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:38:07.042956 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:34dbae66-4e32-407c-a455-f8abd06bbd90&page=queryresults
+[0m19:38:07.587733 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a1cbe3ad-e2ea-4635-949b-fba17f694895', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002893B713AD0>]}
+[0m19:38:07.588454 [info ] [Thread-1 (]: 1 of 1 OK created sql view model wide_world_importers_dwh.dim_product .......... [[32mCREATE VIEW (0 processed)[0m in 1.67s]
+[0m19:38:07.589879 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.dim_product
+[0m19:38:07.591544 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:38:07.629448 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:38:07.629862 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m19:38:07.630236 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m19:38:07.630470 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_product' was properly closed.
+[0m19:38:07.630982 [info ] [MainThread]: 
+[0m19:38:07.631615 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.01 seconds (3.01s).
+[0m19:38:07.632553 [debug] [MainThread]: Command end result
+[0m19:38:07.675148 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m19:38:07.677678 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m19:38:07.684895 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m19:38:07.685357 [info ] [MainThread]: 
+[0m19:38:07.686113 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:38:07.686772 [info ] [MainThread]: 
+[0m19:38:07.687472 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m19:38:07.689325 [debug] [MainThread]: Command `dbt run` succeeded at 19:38:07.689145 after 9.45 seconds
+[0m19:38:07.689796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002893B9A7C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002893B14A670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002893B14BED0>]}
+[0m19:38:07.690137 [debug] [MainThread]: Flushing usage events
+[0m19:38:09.017308 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:53:43.555727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6CE946510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6CC7B1D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6CF684190>]}
+
+
+============================== 19:53:43.561165 | 029f2ceb-09a0-4b8d-871e-1fa133b7f8ba ==============================
+[0m19:53:43.561165 [info ] [MainThread]: Running with dbt=1.10.9
+[0m19:53:43.561956 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'D:\\data_warehouse_project', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt run --select dim_product', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'False', 'quiet': 'False', 'use_experimental_parser': 'False', 'printer_width': '80', 'log_path': 'D:\\data_warehouse_project\\logs', 'indirect_selection': 'eager', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m19:53:47.598040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '029f2ceb-09a0-4b8d-871e-1fa133b7f8ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6CF020FC0>]}
+[0m19:53:47.663827 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '029f2ceb-09a0-4b8d-871e-1fa133b7f8ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6ED23E7A0>]}
+[0m19:53:47.664560 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m19:53:48.720492 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m19:53:48.944994 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m19:53:48.945658 [debug] [MainThread]: Partial parsing: updated file: wide_world_importers_dbt://models\Analystics\dim_product.sql
+[0m19:53:49.195248 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.staging
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+- models.wide_world_importers_dbt.analytics
+[0m19:53:49.203114 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '029f2ceb-09a0-4b8d-871e-1fa133b7f8ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6ED262550>]}
+[0m19:53:49.432866 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m19:53:49.435346 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m19:53:49.471338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '029f2ceb-09a0-4b8d-871e-1fa133b7f8ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6ED2CB020>]}
+[0m19:53:49.471949 [info ] [MainThread]: Found 7 models, 875 macros
+[0m19:53:49.472934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '029f2ceb-09a0-4b8d-871e-1fa133b7f8ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6ED4174D0>]}
+[0m19:53:49.474416 [info ] [MainThread]: 
+[0m19:53:49.475027 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:53:49.475415 [info ] [MainThread]: 
+[0m19:53:49.476054 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m19:53:49.477184 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m19:53:49.477542 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:53:50.287695 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m19:53:50.288369 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:53:50.897940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '029f2ceb-09a0-4b8d-871e-1fa133b7f8ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6ED9CF6C0>]}
+[0m19:53:50.899141 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:53:50.967346 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.dim_product
+[0m19:53:50.967808 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.dim_product ............... [RUN]
+[0m19:53:50.968549 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_product'
+[0m19:53:50.968936 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.dim_product
+[0m19:53:50.976051 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_product"
+[0m19:53:50.976907 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.dim_product
+[0m19:53:51.009553 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_product"
+[0m19:53:51.010703 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_product"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_product`
+  OPTIONS()
+  as WITH dim_product__resource AS (
+  SELECT 
+    *
+  FROM vit-lam-data.wide_world_importers.warehouse__stock_items
+), 
+
+dim_product__renamed AS (
+  SELECT 
+    stock_item_id AS product_key,
+    stock_item_name AS product_name,
+    brand AS product_brand,
+    size AS product_size,
+    lead_time_days AS product_lead_time,
+    quantity_per_outer AS product_quantity_per_outer,
+    is_chiller_stock AS product_is_chiller_stock,
+    tax_rate AS product_tax_rate,
+    unit_price AS product_unit_price,
+    recommended_retail_price AS product_recommended_retail_price,
+    typical_weight_per_unit AS product_typical_weight_per_unit,
+    marketing_comments AS product_marketing_comments,
+    internal_comments AS product_internal_comments,
+    custom_fields AS product_custom_fields,
+    tags AS product_tags,
+    search_details AS product_search_details,
+    last_edited_by AS producT_last_edited_by,
+    supplier_id AS supplier_key,
+    color_id AS color_key,
+    unit_price AS product_price,
+    recommended_retail_price AS product_rrp,
+    typical_weight_per_unit AS product_weight,
+    marketing_comments AS product_description,
+  FROM dim_product__resource
+),
+dim_product_convert__boolean AS (
+  SELECT 
+    *, 
+    CASE 
+      WHEN product_is_chiller_stock IS TRUE THEN 'on_product_is_chiller_stock' 
+      WHEN product_is_chiller_stock IS FALSE THEN 'off_product_is_chiller_stock' 
+      ELSE 'undefined' 
+    END AS product_is_chiller_stock_flag
+  FROM dim_product__renamed
+), dim_product_add_undefined__record AS (
+  SELECT 
+    product_key,
+    product_name,
+    product_brand,
+    product_size,
+    product_lead_time,
+    product_quantity_per_outer,
+    product_is_chiller_stock_flag,
+    product_tax_rate,
+    product_unit_price,
+    product_recommended_retail_price,
+    product_typical_weight_per_unit,
+    product_marketing_comments,
+    product_internal_comments,
+    product_custom_fields,
+    product_tags,
+    product_search_details,
+    producT_last_edited_by,
+    supplier_key,
+    color_key,
+    product_price,
+    product_rrp,
+    product_weight,
+    product_description
+
+    UNION ALL
+    SELECT
+    0 AS product_key,
+    'undefined' AS product_name,
+    'undefined' AS product_brand,
+    'undefined' AS product_size,
+    0 AS product_lead_time,
+    0 AS product_quantity_per_outer,
+    'undefined' AS product_is_chiller_stock_flag,
+    0 AS product_tax_rate,
+    0 AS product_unit_price,
+    0 AS product_recommended_retail_price,
+    0 AS product_typical_weight_per_unit,
+    'undefined' AS product_marketing_comments,
+    'undefined' AS product_internal_comments,
+    'undefined' AS product_custom_fields,
+    'undefined' AS product_tags,
+    'undefined' AS product_search_details,
+    0 AS producT_last_edited_by,
+    0 AS supplier_key,
+    0 AS color_key,
+    0 AS product_price,
+    0 AS product_rrp,
+    0 AS product_weight,
+    'undefined' AS product_description
+  UNION ALL
+    SELECT
+    -1 AS product_key,
+    'Invalid' AS product_name,
+    'Invalid' AS product_brand,
+    'Invalid' AS product_size,
+    -1 AS product_lead_time,
+    -1 AS product_quantity_per_outer,
+    'undefined' AS product_is_chiller_stock_flag,
+    -1 AS product_tax_rate,
+    -1 AS product_unit_price,
+    -1 AS product_recommended_retail_price,
+    -1 AS product_typical_weight_per_unit,
+    'Invalid' AS product_marketing_comments,
+    'Invalid' AS product_internal_comments,
+    'Invalid' AS product_custom_fields,
+    'Invalid' AS product_tags,
+    'Invalid' AS product_search_details,
+    -1 AS product_last_edited_by,
+    -1 AS supplier_key,
+    -1 AS color_key,
+    -1 AS product_price,
+    -1 AS product_rrp,
+    -1 AS product_weight,
+    'Invalid' AS product_description
+  FROM dim_product_convert__boolean
+)
+SELECT 
+  * 
+FROM 
+  dim_product_add_undefined__record;
+
+
+[0m19:53:51.011386 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:53:52.836408 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:1c21a4fa-3780-4085-985e-b8f87493fa80&page=queryresults
+[0m19:53:53.077070 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:1c21a4fa-3780-4085-985e-b8f87493fa80&page=queryresults
+[0m19:53:53.088845 [debug] [Thread-1 (]: Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Unrecognized name: product_key at [50:5]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m19:53:53.093063 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '029f2ceb-09a0-4b8d-871e-1fa133b7f8ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6ED8D2D50>]}
+[0m19:53:53.094557 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model wide_world_importers_dwh.dim_product ...... [[31mERROR[0m in 2.12s]
+[0m19:53:53.095837 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.dim_product
+[0m19:53:53.096581 [debug] [Thread-7 (]: Marking all children of 'model.wide_world_importers_dbt.dim_product' to be skipped because of status 'error'.  Reason: Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Unrecognized name: product_key at [50:5]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql.
+[0m19:53:53.099389 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:53:53.142855 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:53:53.143335 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m19:53:53.143597 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m19:53:53.143872 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_product' was properly closed.
+[0m19:53:53.144140 [info ] [MainThread]: 
+[0m19:53:53.144744 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.67 seconds (3.67s).
+[0m19:53:53.145724 [debug] [MainThread]: Command end result
+[0m19:53:53.182990 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m19:53:53.185478 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m19:53:53.193318 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m19:53:53.193836 [info ] [MainThread]: 
+[0m19:53:53.194693 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m19:53:53.195578 [info ] [MainThread]: 
+[0m19:53:53.196355 [error] [MainThread]: [31mFailure in model dim_product (models\Analystics\dim_product.sql)[0m
+[0m19:53:53.197152 [error] [MainThread]:   Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Unrecognized name: product_key at [50:5]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m19:53:53.197721 [info ] [MainThread]: 
+[0m19:53:53.198298 [info ] [MainThread]:   compiled code at target\compiled\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m19:53:53.198708 [info ] [MainThread]: 
+[0m19:53:53.199165 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m19:53:53.200349 [debug] [MainThread]: Command `dbt run` failed at 19:53:53.200209 after 9.90 seconds
+[0m19:53:53.200877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6EDB5A360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6ED309D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6ED309DB0>]}
+[0m19:53:53.201228 [debug] [MainThread]: Flushing usage events
+[0m19:53:56.213653 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:36:08.851389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022718FA6510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022716E11D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022719CE4190>]}
+
+
+============================== 15:36:08.859934 | 072ef405-a605-4ad2-a4ca-aa08380c36dd ==============================
+[0m15:36:08.859934 [info ] [MainThread]: Running with dbt=1.10.9
+[0m15:36:08.861138 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt run --select dim_product', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'empty': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'log_path': 'D:\\data_warehouse_project\\logs', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': 'D:\\data_warehouse_project'}
+[0m15:36:17.956295 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '072ef405-a605-4ad2-a4ca-aa08380c36dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002271967CFC0>]}
+[0m15:36:18.009666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '072ef405-a605-4ad2-a4ca-aa08380c36dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227378DE7A0>]}
+[0m15:36:18.010372 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m15:36:19.219226 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m15:36:23.049080 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m15:36:23.049654 [debug] [MainThread]: Partial parsing: updated file: wide_world_importers_dbt://models\Analystics\dim_product.sql
+[0m15:36:23.263626 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.analytics
+- models.wide_world_importers_dbt.staging
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+[0m15:36:23.268906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '072ef405-a605-4ad2-a4ca-aa08380c36dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022737902550>]}
+[0m15:36:23.483882 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m15:36:23.524917 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m15:36:23.582450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '072ef405-a605-4ad2-a4ca-aa08380c36dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002273796B020>]}
+[0m15:36:23.582930 [info ] [MainThread]: Found 7 models, 875 macros
+[0m15:36:23.583469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '072ef405-a605-4ad2-a4ca-aa08380c36dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022737AB34D0>]}
+[0m15:36:23.585199 [info ] [MainThread]: 
+[0m15:36:23.585827 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:36:23.586380 [info ] [MainThread]: 
+[0m15:36:23.587043 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m15:36:23.588232 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m15:36:23.588632 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:36:24.230305 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m15:36:24.231002 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:36:24.729638 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '072ef405-a605-4ad2-a4ca-aa08380c36dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002273806F6C0>]}
+[0m15:36:24.730802 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:36:24.786958 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.dim_product
+[0m15:36:24.787935 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.dim_product ............... [RUN]
+[0m15:36:24.789423 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_product'
+[0m15:36:24.790245 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.dim_product
+[0m15:36:24.800648 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_product"
+[0m15:36:24.802067 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.dim_product
+[0m15:36:24.855141 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_product"
+[0m15:36:24.858613 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_product"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_product`
+  OPTIONS()
+  as WITH dim_product__resource AS (
+  SELECT 
+    *
+  FROM vit-lam-data.wide_world_importers.warehouse__stock_items
+), 
+
+dim_product__renamed AS (
+  SELECT 
+    stock_item_id AS product_key,
+    stock_item_name AS product_name,
+    brand AS product_brand,
+    size AS product_size,
+    lead_time_days AS product_lead_time,
+    quantity_per_outer AS product_quantity_per_outer,
+    is_chiller_stock AS product_is_chiller_stock,
+    tax_rate AS product_tax_rate,
+    unit_price AS product_unit_price,
+    recommended_retail_price AS product_recommended_retail_price,
+    typical_weight_per_unit AS product_typical_weight_per_unit,
+    marketing_comments AS product_marketing_comments,
+    internal_comments AS product_internal_comments,
+    custom_fields AS product_custom_fields,
+    tags AS product_tags,
+    search_details AS product_search_details,
+    last_edited_by AS producT_last_edited_by,
+    supplier_id AS supplier_key,
+    color_id AS color_key,
+    unit_price AS product_price,
+    recommended_retail_price AS product_rrp,
+    typical_weight_per_unit AS product_weight,
+    marketing_comments AS product_description,
+  FROM dim_product__resource
+),
+dim_product_convert__boolean AS (
+  SELECT 
+    *, 
+    CASE 
+      WHEN product_is_chiller_stock IS TRUE THEN 'on_product_is_chiller_stock' 
+      WHEN product_is_chiller_stock IS FALSE THEN 'off_product_is_chiller_stock' 
+      ELSE 'undefined' 
+    END AS product_is_chiller_stock_flag
+  FROM dim_product__renamed
+), 
+dim_product_add_undefined__record AS (
+  SELECT 
+    product_key,
+    product_name,
+    product_brand,
+    product_size,
+    product_lead_time,
+    product_quantity_per_outer,
+    product_is_chiller_stock_flag,
+    product_tax_rate,
+    product_unit_price,
+    product_recommended_retail_price,
+    product_typical_weight_per_unit,
+    product_marketing_comments,
+    product_internal_comments,
+    product_custom_fields,
+    product_tags,
+    product_search_details,
+    producT_last_edited_by,
+    supplier_key,
+    color_key,
+    product_price,
+    product_rrp,
+    product_weight,
+    product_description
+
+    UNION ALL
+    SELECT
+    0 AS product_key,
+    'undefined' AS product_name,
+    'undefined' AS product_brand,
+    'undefined' AS product_size,
+    0 AS product_lead_time,
+    0 AS product_quantity_per_outer,
+    'undefined' AS product_is_chiller_stock_flag,
+    0 AS product_tax_rate,
+    0 AS product_unit_price,
+    0 AS product_recommended_retail_price,
+    0 AS product_typical_weight_per_unit,
+    'undefined' AS product_marketing_comments,
+    'undefined' AS product_internal_comments,
+    'undefined' AS product_custom_fields,
+    'undefined' AS product_tags,
+    'undefined' AS product_search_details,
+    0 AS producT_last_edited_by,
+    0 AS supplier_key,
+    0 AS color_key,
+    0 AS product_price,
+    0 AS product_rrp,
+    0 AS product_weight,
+    'undefined' AS product_description
+
+  UNION ALL
+    SELECT
+    -1 AS product_key,
+    'Invalid' AS product_name,
+    'Invalid' AS product_brand,
+    'Invalid' AS product_size,
+    -1 AS product_lead_time,
+    -1 AS product_quantity_per_outer,
+    'undefined' AS product_is_chiller_stock_flag,
+    -1 AS product_tax_rate,
+    -1 AS product_unit_price,
+    -1 AS product_recommended_retail_price,
+    -1 AS product_typical_weight_per_unit,
+    'Invalid' AS product_marketing_comments,
+    'Invalid' AS product_internal_comments,
+    'Invalid' AS product_custom_fields,
+    'Invalid' AS product_tags,
+    'Invalid' AS product_search_details,
+    -1 AS product_last_edited_by,
+    -1 AS supplier_key,
+    -1 AS color_key,
+    -1 AS product_price,
+    -1 AS product_rrp,
+    -1 AS product_weight,
+    'Invalid' AS product_description
+  FROM dim_product_convert__boolean
+)
+SELECT 
+  * 
+FROM 
+  dim_product_add_undefined__record;
+
+
+[0m15:36:24.859321 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:36:26.607925 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:ae113fea-af5a-4ed5-aebc-ae498a287ff2&page=queryresults
+[0m15:36:26.791497 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:ae113fea-af5a-4ed5-aebc-ae498a287ff2&page=queryresults
+[0m15:36:26.920951 [debug] [Thread-1 (]: Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Unrecognized name: product_key at [51:5]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m15:36:26.923394 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '072ef405-a605-4ad2-a4ca-aa08380c36dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022737F72D50>]}
+[0m15:36:26.924048 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model wide_world_importers_dwh.dim_product ...... [[31mERROR[0m in 2.13s]
+[0m15:36:26.924875 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.dim_product
+[0m15:36:26.925422 [debug] [Thread-7 (]: Marking all children of 'model.wide_world_importers_dbt.dim_product' to be skipped because of status 'error'.  Reason: Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Unrecognized name: product_key at [51:5]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql.
+[0m15:36:26.927527 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:36:26.963165 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:36:26.963667 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m15:36:26.963975 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m15:36:26.964223 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_product' was properly closed.
+[0m15:36:26.964562 [info ] [MainThread]: 
+[0m15:36:26.965228 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.38 seconds (3.38s).
+[0m15:36:26.966311 [debug] [MainThread]: Command end result
+[0m15:36:27.003536 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m15:36:27.006531 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m15:36:27.013644 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m15:36:27.014034 [info ] [MainThread]: 
+[0m15:36:27.014613 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:36:27.015255 [info ] [MainThread]: 
+[0m15:36:27.016269 [error] [MainThread]: [31mFailure in model dim_product (models\Analystics\dim_product.sql)[0m
+[0m15:36:27.016951 [error] [MainThread]:   Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Unrecognized name: product_key at [51:5]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m15:36:27.017450 [info ] [MainThread]: 
+[0m15:36:27.018030 [info ] [MainThread]:   compiled code at target\compiled\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m15:36:27.018539 [info ] [MainThread]: 
+[0m15:36:27.019096 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:36:27.020213 [debug] [MainThread]: Command `dbt run` failed at 15:36:27.020074 after 18.37 seconds
+[0m15:36:27.020608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022738206360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227379ADD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227379ADDB0>]}
+[0m15:36:27.020946 [debug] [MainThread]: Flushing usage events
+[0m15:36:36.917348 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:38:29.497516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211A30B6510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211A0F8DD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211A3E04190>]}
+
+
+============================== 15:38:29.502176 | e49f2a2f-5821-4fea-8c69-7ee256c0cf05 ==============================
+[0m15:38:29.502176 [info ] [MainThread]: Running with dbt=1.10.9
+[0m15:38:29.503108 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt run --select dim_product', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'empty': 'False', 'log_cache_events': 'False', 'quiet': 'False', 'indirect_selection': 'eager', 'log_path': 'D:\\data_warehouse_project\\logs', 'profiles_dir': 'D:\\data_warehouse_project', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True'}
+[0m15:38:33.490508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e49f2a2f-5821-4fea-8c69-7ee256c0cf05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211A37A0FC0>]}
+[0m15:38:33.554926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e49f2a2f-5821-4fea-8c69-7ee256c0cf05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211C19BE7A0>]}
+[0m15:38:33.555772 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m15:38:34.436957 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m15:38:34.649182 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m15:38:34.649976 [debug] [MainThread]: Partial parsing: updated file: wide_world_importers_dbt://models\Analystics\dim_product.sql
+[0m15:38:34.884580 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.analytics
+- models.wide_world_importers_dbt.staging
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+[0m15:38:34.890133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e49f2a2f-5821-4fea-8c69-7ee256c0cf05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211C19E2550>]}
+[0m15:38:35.098038 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m15:38:35.100478 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m15:38:35.136692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e49f2a2f-5821-4fea-8c69-7ee256c0cf05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211C1A4B020>]}
+[0m15:38:35.137177 [info ] [MainThread]: Found 7 models, 875 macros
+[0m15:38:35.137778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e49f2a2f-5821-4fea-8c69-7ee256c0cf05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211C1B974D0>]}
+[0m15:38:35.139550 [info ] [MainThread]: 
+[0m15:38:35.140250 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:38:35.140753 [info ] [MainThread]: 
+[0m15:38:35.141459 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m15:38:35.142571 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m15:38:35.142902 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:38:35.777133 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m15:38:35.777581 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:38:36.197600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e49f2a2f-5821-4fea-8c69-7ee256c0cf05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211C214F6C0>]}
+[0m15:38:36.198681 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:38:36.243654 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.dim_product
+[0m15:38:36.244144 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.dim_product ............... [RUN]
+[0m15:38:36.244817 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_product'
+[0m15:38:36.245184 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.dim_product
+[0m15:38:36.250329 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_product"
+[0m15:38:36.251127 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.dim_product
+[0m15:38:36.281366 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_product"
+[0m15:38:36.282447 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_product"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_product`
+  OPTIONS()
+  as WITH dim_product__resource AS (
+  SELECT 
+    *
+  FROM vit-lam-data.wide_world_importers.warehouse__stock_items
+), 
+
+dim_product__renamed AS (
+  SELECT 
+    stock_item_id AS product_key,
+    stock_item_name AS product_name,
+    brand AS product_brand,
+    size AS product_size,
+    lead_time_days AS product_lead_time,
+    quantity_per_outer AS product_quantity_per_outer,
+    is_chiller_stock AS product_is_chiller_stock,
+    tax_rate AS product_tax_rate,
+    unit_price AS product_unit_price,
+    recommended_retail_price AS product_recommended_retail_price,
+    typical_weight_per_unit AS product_typical_weight_per_unit,
+    marketing_comments AS product_marketing_comments,
+    internal_comments AS product_internal_comments,
+    custom_fields AS product_custom_fields,
+    tags AS product_tags,
+    search_details AS product_search_details,
+    last_edited_by AS producT_last_edited_by,
+    supplier_id AS supplier_key,
+    color_id AS color_key,
+    unit_price AS product_price,
+    recommended_retail_price AS product_rrp,
+    typical_weight_per_unit AS product_weight,
+    marketing_comments AS product_description
+  FROM dim_product__resource
+),
+dim_product_convert__boolean AS (
+  SELECT 
+    *, 
+    CASE 
+      WHEN product_is_chiller_stock IS TRUE THEN 'on_product_is_chiller_stock' 
+      WHEN product_is_chiller_stock IS FALSE THEN 'off_product_is_chiller_stock' 
+      ELSE 'undefined' 
+    END AS product_is_chiller_stock_flag
+  FROM dim_product__renamed
+), 
+dim_product_add_undefined__record AS (
+  SELECT 
+    product_key,
+    product_name,
+    product_brand,
+    product_size,
+    product_lead_time,
+    product_quantity_per_outer,
+    product_is_chiller_stock_flag,
+    product_tax_rate,
+    product_unit_price,
+    product_recommended_retail_price,
+    product_typical_weight_per_unit,
+    product_marketing_comments,
+    product_internal_comments,
+    product_custom_fields,
+    product_tags,
+    product_search_details,
+    producT_last_edited_by,
+    supplier_key,
+    color_key,
+    product_price,
+    product_rrp,
+    product_weight,
+    product_description
+
+    UNION ALL
+    SELECT
+    0 AS product_key,
+    'undefined' AS product_name,
+    'undefined' AS product_brand,
+    'undefined' AS product_size,
+    0 AS product_lead_time,
+    0 AS product_quantity_per_outer,
+    'undefined' AS product_is_chiller_stock_flag,
+    0 AS product_tax_rate,
+    0 AS product_unit_price,
+    0 AS product_recommended_retail_price,
+    0 AS product_typical_weight_per_unit,
+    'undefined' AS product_marketing_comments,
+    'undefined' AS product_internal_comments,
+    'undefined' AS product_custom_fields,
+    'undefined' AS product_tags,
+    'undefined' AS product_search_details,
+    0 AS producT_last_edited_by,
+    0 AS supplier_key,
+    0 AS color_key,
+    0 AS product_price,
+    0 AS product_rrp,
+    0 AS product_weight,
+    'undefined' AS product_description
+
+  UNION ALL
+    SELECT
+    -1 AS product_key,
+    'Invalid' AS product_name,
+    'Invalid' AS product_brand,
+    'Invalid' AS product_size,
+    -1 AS product_lead_time,
+    -1 AS product_quantity_per_outer,
+    'undefined' AS product_is_chiller_stock_flag,
+    -1 AS product_tax_rate,
+    -1 AS product_unit_price,
+    -1 AS product_recommended_retail_price,
+    -1 AS product_typical_weight_per_unit,
+    'Invalid' AS product_marketing_comments,
+    'Invalid' AS product_internal_comments,
+    'Invalid' AS product_custom_fields,
+    'Invalid' AS product_tags,
+    'Invalid' AS product_search_details,
+    -1 AS product_last_edited_by,
+    -1 AS supplier_key,
+    -1 AS color_key,
+    -1 AS product_price,
+    -1 AS product_rrp,
+    -1 AS product_weight,
+    'Invalid' AS product_description
+  FROM dim_product_convert__boolean
+)
+SELECT 
+  * 
+FROM 
+  dim_product_add_undefined__record;
+
+
+[0m15:38:36.283067 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:38:38.057158 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:91222ede-3993-4009-9757-126376eebce6&page=queryresults
+[0m15:38:38.205204 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:91222ede-3993-4009-9757-126376eebce6&page=queryresults
+[0m15:38:38.216539 [debug] [Thread-1 (]: Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Unrecognized name: product_key at [51:5]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m15:38:38.218795 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e49f2a2f-5821-4fea-8c69-7ee256c0cf05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211C1C4AD50>]}
+[0m15:38:38.219410 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model wide_world_importers_dwh.dim_product ...... [[31mERROR[0m in 1.97s]
+[0m15:38:38.220325 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.dim_product
+[0m15:38:38.220984 [debug] [Thread-7 (]: Marking all children of 'model.wide_world_importers_dbt.dim_product' to be skipped because of status 'error'.  Reason: Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Unrecognized name: product_key at [51:5]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql.
+[0m15:38:38.223789 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:38:38.262215 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:38:38.262786 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m15:38:38.263158 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m15:38:38.263511 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_product' was properly closed.
+[0m15:38:38.263923 [info ] [MainThread]: 
+[0m15:38:38.264601 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.12 seconds (3.12s).
+[0m15:38:38.265464 [debug] [MainThread]: Command end result
+[0m15:38:38.297162 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m15:38:38.299633 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m15:38:38.306748 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m15:38:38.307222 [info ] [MainThread]: 
+[0m15:38:38.308064 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:38:38.308728 [info ] [MainThread]: 
+[0m15:38:38.309502 [error] [MainThread]: [31mFailure in model dim_product (models\Analystics\dim_product.sql)[0m
+[0m15:38:38.310155 [error] [MainThread]:   Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Unrecognized name: product_key at [51:5]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m15:38:38.310664 [info ] [MainThread]: 
+[0m15:38:38.311295 [info ] [MainThread]:   compiled code at target\compiled\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m15:38:38.311803 [info ] [MainThread]: 
+[0m15:38:38.312286 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:38:38.313398 [debug] [MainThread]: Command `dbt run` failed at 15:38:38.313279 after 8.96 seconds
+[0m15:38:38.313748 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211C22E6360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211C1A8DD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211C1A8DDB0>]}
+[0m15:38:38.314046 [debug] [MainThread]: Flushing usage events
+[0m15:38:42.205398 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:40:58.235940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC99546510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC973DDD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC9A284190>]}
+
+
+============================== 15:40:58.241243 | be9f43b4-3b93-4984-af2d-71e7a576c707 ==============================
+[0m15:40:58.241243 [info ] [MainThread]: Running with dbt=1.10.9
+[0m15:40:58.242083 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt run --select dim_product', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'False', 'quiet': 'False', 'printer_width': '80', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'D:\\data_warehouse_project\\logs', 'profiles_dir': 'D:\\data_warehouse_project', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True'}
+[0m15:41:03.050722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'be9f43b4-3b93-4984-af2d-71e7a576c707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC99C1CFC0>]}
+[0m15:41:03.121048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'be9f43b4-3b93-4984-af2d-71e7a576c707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECB7EAE7A0>]}
+[0m15:41:03.121978 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m15:41:04.881252 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m15:41:05.244678 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m15:41:05.246245 [debug] [MainThread]: Partial parsing: updated file: wide_world_importers_dbt://models\Analystics\dim_product.sql
+[0m15:41:05.722189 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.staging
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+- models.wide_world_importers_dbt.analytics
+[0m15:41:05.729810 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'be9f43b4-3b93-4984-af2d-71e7a576c707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECB7ED2550>]}
+[0m15:41:06.064331 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m15:41:06.067977 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m15:41:06.115077 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'be9f43b4-3b93-4984-af2d-71e7a576c707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECB7F3B020>]}
+[0m15:41:06.115634 [info ] [MainThread]: Found 7 models, 875 macros
+[0m15:41:06.116331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'be9f43b4-3b93-4984-af2d-71e7a576c707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECB80834D0>]}
+[0m15:41:06.118469 [info ] [MainThread]: 
+[0m15:41:06.119229 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:41:06.119895 [info ] [MainThread]: 
+[0m15:41:06.120809 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m15:41:06.122066 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m15:41:06.122801 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:41:06.782032 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m15:41:06.783071 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:41:07.266864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'be9f43b4-3b93-4984-af2d-71e7a576c707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECB863F6C0>]}
+[0m15:41:07.267939 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:41:07.359270 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.dim_product
+[0m15:41:07.360306 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.dim_product ............... [RUN]
+[0m15:41:07.362132 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_product'
+[0m15:41:07.363093 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.dim_product
+[0m15:41:07.379639 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_product"
+[0m15:41:07.382030 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.dim_product
+[0m15:41:07.457564 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_product"
+[0m15:41:07.459706 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_product"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_product`
+  OPTIONS()
+  as WITH dim_product__resource AS (
+  SELECT
+    *
+  FROM `vit-lam-data.wide_world_importers.warehouse__stock_items`
+),
+
+dim_product__renamed AS (
+  SELECT 
+    stock_item_id AS product_key,
+    stock_item_name AS product_name,
+    brand AS product_brand,
+    size AS product_size,
+    lead_time_days AS product_lead_time,
+    quantity_per_outer AS product_quantity_per_outer,
+    is_chiller_stock AS product_is_chiller_stock,
+    tax_rate AS product_tax_rate,
+    unit_price AS product_unit_price,
+    recommended_retail_price AS product_recommended_retail_price,
+    typical_weight_per_unit AS product_typical_weight_per_unit,
+    marketing_comments AS product_marketing_comments,
+    internal_comments AS product_internal_comments,
+    custom_fields AS product_custom_fields,
+    tags AS product_tags,
+    search_details AS product_search_details,
+    last_edited_by AS product_last_edited_by,
+    supplier_id AS supplier_key,
+    color_id AS color_key,
+    unit_price AS product_price,
+    recommended_retail_price AS product_rrp,
+    typical_weight_per_unit AS product_weight,
+    marketing_comments AS product_description
+  FROM dim_product__resource
+),
+
+dim_product_convert__boolean AS (
+  SELECT 
+    *, 
+    CASE 
+      WHEN product_is_chiller_stock IS TRUE THEN 'on_product_is_chiller_stock' 
+      WHEN product_is_chiller_stock IS FALSE THEN 'off_product_is_chiller_stock' 
+      ELSE 'undefined' 
+    END AS product_is_chiller_stock_flag
+  FROM dim_product__renamed
+), 
+
+dim_product_add_undefined__record AS (
+  SELECT 
+    product_key,
+    product_name,
+    product_brand,
+    product_size,
+    product_lead_time,
+    product_quantity_per_outer,
+    product_is_chiller_stock_flag,
+    product_tax_rate,
+    product_unit_price,
+    product_recommended_retail_price,
+    product_typical_weight_per_unit,
+    product_marketing_comments,
+    product_internal_comments,
+    product_custom_fields,
+    product_tags,
+    product_search_details,
+    product_last_edited_by,
+    supplier_key,
+    color_key,
+    product_price,
+    product_rrp,
+    product_weight,
+    product_description
+  FROM dim_product_convert__boolean
+
+  UNION ALL
+
+  SELECT
+    0 AS product_key,
+    'undefined' AS product_name,
+    'undefined' AS product_brand,
+    'undefined' AS product_size,
+    0 AS product_lead_time,
+    0 AS product_quantity_per_outer,
+    'undefined' AS product_is_chiller_stock_flag,
+    0 AS product_tax_rate,
+    0 AS product_unit_price,
+    0 AS product_recommended_retail_price,
+    0 AS product_typical_weight_per_unit,
+    'undefined' AS product_marketing_comments,
+    'undefined' AS product_internal_comments,
+    'undefined' AS product_custom_fields,
+    'undefined' AS product_tags,
+    'undefined' AS product_search_details,
+    0 AS product_last_edited_by,
+    0 AS supplier_key,
+    0 AS color_key,
+    0 AS product_price,
+    0 AS product_rrp,
+    0 AS product_weight,
+    'undefined' AS product_description
+
+  UNION ALL
+
+  SELECT
+    -1 AS product_key,
+    'Invalid' AS product_name,
+    'Invalid' AS product_brand,
+    'Invalid' AS product_size,
+    -1 AS product_lead_time,
+    -1 AS product_quantity_per_outer,
+    'undefined' AS product_is_chiller_stock_flag,
+    -1 AS product_tax_rate,
+    -1 AS product_unit_price,
+    -1 AS product_recommended_retail_price,
+    -1 AS product_typical_weight_per_unit,
+    'Invalid' AS product_marketing_comments,
+    'Invalid' AS product_internal_comments,
+    'Invalid' AS product_custom_fields,
+    'Invalid' AS product_tags,
+    'Invalid' AS product_search_details,
+    -1 AS product_last_edited_by,
+    -1 AS supplier_key,
+    -1 AS color_key,
+    -1 AS product_price,
+    -1 AS product_rrp,
+    -1 AS product_weight,
+    'Invalid' AS product_description
+),
+
+SELECT *
+ FROM dim_product_add_undefined__record;;
+
+
+[0m15:41:07.461029 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:41:08.081027 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:c59a5570-78ca-44d2-830f-18b063911a08&page=queryresults
+[0m15:41:08.081592 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:c59a5570-78ca-44d2-830f-18b063911a08&page=queryresults
+[0m15:41:08.099333 [debug] [Thread-1 (]: Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Syntax error: Trailing comma after the WITH clause before the main query is not allowed at [133:1]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m15:41:08.105050 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'be9f43b4-3b93-4984-af2d-71e7a576c707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECB8542D50>]}
+[0m15:41:08.106616 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model wide_world_importers_dwh.dim_product ...... [[31mERROR[0m in 0.74s]
+[0m15:41:08.108124 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.dim_product
+[0m15:41:08.109473 [debug] [Thread-7 (]: Marking all children of 'model.wide_world_importers_dbt.dim_product' to be skipped because of status 'error'.  Reason: Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Syntax error: Trailing comma after the WITH clause before the main query is not allowed at [133:1]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql.
+[0m15:41:08.114972 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:41:08.184069 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:41:08.185197 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m15:41:08.186089 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m15:41:08.187011 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_product' was properly closed.
+[0m15:41:08.187965 [info ] [MainThread]: 
+[0m15:41:08.188989 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.07 seconds (2.07s).
+[0m15:41:08.190720 [debug] [MainThread]: Command end result
+[0m15:41:08.266506 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m15:41:08.269917 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m15:41:08.277831 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m15:41:08.278317 [info ] [MainThread]: 
+[0m15:41:08.278984 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:41:08.279522 [info ] [MainThread]: 
+[0m15:41:08.280226 [error] [MainThread]: [31mFailure in model dim_product (models\Analystics\dim_product.sql)[0m
+[0m15:41:08.280868 [error] [MainThread]:   Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Syntax error: Trailing comma after the WITH clause before the main query is not allowed at [133:1]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m15:41:08.281513 [info ] [MainThread]: 
+[0m15:41:08.282238 [info ] [MainThread]:   compiled code at target\compiled\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m15:41:08.282935 [info ] [MainThread]: 
+[0m15:41:08.283544 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:41:08.285112 [debug] [MainThread]: Command `dbt run` failed at 15:41:08.284962 after 10.20 seconds
+[0m15:41:08.285551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECB87D6360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECB7F7DD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECB7F7DDB0>]}
+[0m15:41:08.286002 [debug] [MainThread]: Flushing usage events
+[0m15:41:10.836469 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:41:51.338072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013858EB6510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013856D91D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013859BF4190>]}
+
+
+============================== 15:41:51.342885 | 70755986-68f9-4d77-89a1-e95dee9de861 ==============================
+[0m15:41:51.342885 [info ] [MainThread]: Running with dbt=1.10.9
+[0m15:41:51.344048 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt run --select dim_product', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'log_path': 'D:\\data_warehouse_project\\logs', 'profiles_dir': 'D:\\data_warehouse_project', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True'}
+[0m15:41:55.125649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '70755986-68f9-4d77-89a1-e95dee9de861', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013859590FC0>]}
+[0m15:41:55.184234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '70755986-68f9-4d77-89a1-e95dee9de861', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000138777BE7A0>]}
+[0m15:41:55.185055 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m15:41:56.154407 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m15:41:56.384730 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:41:56.385119 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:41:56.390130 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.analytics
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+- models.wide_world_importers_dbt.staging
+[0m15:41:56.411985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '70755986-68f9-4d77-89a1-e95dee9de861', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000138777E2C50>]}
+[0m15:41:56.489993 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m15:41:56.492872 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m15:41:56.524063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '70755986-68f9-4d77-89a1-e95dee9de861', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001387784B020>]}
+[0m15:41:56.524524 [info ] [MainThread]: Found 7 models, 875 macros
+[0m15:41:56.525518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '70755986-68f9-4d77-89a1-e95dee9de861', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013877D8ADD0>]}
+[0m15:41:56.526787 [info ] [MainThread]: 
+[0m15:41:56.527260 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:41:56.527671 [info ] [MainThread]: 
+[0m15:41:56.528350 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m15:41:56.529475 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m15:41:56.529848 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:41:57.146883 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m15:41:57.147284 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:41:57.638368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '70755986-68f9-4d77-89a1-e95dee9de861', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013877FD1BF0>]}
+[0m15:41:57.640177 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:41:57.683801 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.dim_product
+[0m15:41:57.684566 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.dim_product ............... [RUN]
+[0m15:41:57.685584 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_product'
+[0m15:41:57.686249 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.dim_product
+[0m15:41:57.699042 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_product"
+[0m15:41:57.700425 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.dim_product
+[0m15:41:57.749946 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_product"
+[0m15:41:57.751183 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_product"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_product`
+  OPTIONS()
+  as WITH dim_product__resource AS (
+  SELECT
+    *
+  FROM `vit-lam-data.wide_world_importers.warehouse__stock_items`
+),
+
+dim_product__renamed AS (
+  SELECT 
+    stock_item_id AS product_key,
+    stock_item_name AS product_name,
+    brand AS product_brand,
+    size AS product_size,
+    lead_time_days AS product_lead_time,
+    quantity_per_outer AS product_quantity_per_outer,
+    is_chiller_stock AS product_is_chiller_stock,
+    tax_rate AS product_tax_rate,
+    unit_price AS product_unit_price,
+    recommended_retail_price AS product_recommended_retail_price,
+    typical_weight_per_unit AS product_typical_weight_per_unit,
+    marketing_comments AS product_marketing_comments,
+    internal_comments AS product_internal_comments,
+    custom_fields AS product_custom_fields,
+    tags AS product_tags,
+    search_details AS product_search_details,
+    last_edited_by AS product_last_edited_by,
+    supplier_id AS supplier_key,
+    color_id AS color_key,
+    unit_price AS product_price,
+    recommended_retail_price AS product_rrp,
+    typical_weight_per_unit AS product_weight,
+    marketing_comments AS product_description
+  FROM dim_product__resource
+),
+
+dim_product_convert__boolean AS (
+  SELECT 
+    *, 
+    CASE 
+      WHEN product_is_chiller_stock IS TRUE THEN 'on_product_is_chiller_stock' 
+      WHEN product_is_chiller_stock IS FALSE THEN 'off_product_is_chiller_stock' 
+      ELSE 'undefined' 
+    END AS product_is_chiller_stock_flag
+  FROM dim_product__renamed
+), 
+
+dim_product_add_undefined__record AS (
+  SELECT 
+    product_key,
+    product_name,
+    product_brand,
+    product_size,
+    product_lead_time,
+    product_quantity_per_outer,
+    product_is_chiller_stock_flag,
+    product_tax_rate,
+    product_unit_price,
+    product_recommended_retail_price,
+    product_typical_weight_per_unit,
+    product_marketing_comments,
+    product_internal_comments,
+    product_custom_fields,
+    product_tags,
+    product_search_details,
+    product_last_edited_by,
+    supplier_key,
+    color_key,
+    product_price,
+    product_rrp,
+    product_weight,
+    product_description
+  FROM dim_product_convert__boolean
+
+  UNION ALL
+
+  SELECT
+    0 AS product_key,
+    'undefined' AS product_name,
+    'undefined' AS product_brand,
+    'undefined' AS product_size,
+    0 AS product_lead_time,
+    0 AS product_quantity_per_outer,
+    'undefined' AS product_is_chiller_stock_flag,
+    0 AS product_tax_rate,
+    0 AS product_unit_price,
+    0 AS product_recommended_retail_price,
+    0 AS product_typical_weight_per_unit,
+    'undefined' AS product_marketing_comments,
+    'undefined' AS product_internal_comments,
+    'undefined' AS product_custom_fields,
+    'undefined' AS product_tags,
+    'undefined' AS product_search_details,
+    0 AS product_last_edited_by,
+    0 AS supplier_key,
+    0 AS color_key,
+    0 AS product_price,
+    0 AS product_rrp,
+    0 AS product_weight,
+    'undefined' AS product_description
+
+  UNION ALL
+
+  SELECT
+    -1 AS product_key,
+    'Invalid' AS product_name,
+    'Invalid' AS product_brand,
+    'Invalid' AS product_size,
+    -1 AS product_lead_time,
+    -1 AS product_quantity_per_outer,
+    'undefined' AS product_is_chiller_stock_flag,
+    -1 AS product_tax_rate,
+    -1 AS product_unit_price,
+    -1 AS product_recommended_retail_price,
+    -1 AS product_typical_weight_per_unit,
+    'Invalid' AS product_marketing_comments,
+    'Invalid' AS product_internal_comments,
+    'Invalid' AS product_custom_fields,
+    'Invalid' AS product_tags,
+    'Invalid' AS product_search_details,
+    -1 AS product_last_edited_by,
+    -1 AS supplier_key,
+    -1 AS color_key,
+    -1 AS product_price,
+    -1 AS product_rrp,
+    -1 AS product_weight,
+    'Invalid' AS product_description
+),
+
+SELECT *
+ FROM dim_product_add_undefined__record;;
+
+
+[0m15:41:57.752353 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:41:58.294997 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:fce3222b-6991-41ef-87aa-af7a9594a6a6&page=queryresults
+[0m15:41:58.296577 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:fce3222b-6991-41ef-87aa-af7a9594a6a6&page=queryresults
+[0m15:41:58.308135 [debug] [Thread-1 (]: Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Syntax error: Trailing comma after the WITH clause before the main query is not allowed at [133:1]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m15:41:58.311374 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '70755986-68f9-4d77-89a1-e95dee9de861', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013877CCDC10>]}
+[0m15:41:58.312264 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model wide_world_importers_dwh.dim_product ...... [[31mERROR[0m in 0.62s]
+[0m15:41:58.313144 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.dim_product
+[0m15:41:58.313711 [debug] [Thread-7 (]: Marking all children of 'model.wide_world_importers_dbt.dim_product' to be skipped because of status 'error'.  Reason: Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Syntax error: Trailing comma after the WITH clause before the main query is not allowed at [133:1]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql.
+[0m15:41:58.315692 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:41:58.360093 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:41:58.360654 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m15:41:58.361011 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m15:41:58.361347 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_product' was properly closed.
+[0m15:41:58.361760 [info ] [MainThread]: 
+[0m15:41:58.362335 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.83 seconds (1.83s).
+[0m15:41:58.363174 [debug] [MainThread]: Command end result
+[0m15:41:58.554610 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m15:41:58.557189 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m15:41:58.562954 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m15:41:58.563314 [info ] [MainThread]: 
+[0m15:41:58.564011 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:41:58.564562 [info ] [MainThread]: 
+[0m15:41:58.565178 [error] [MainThread]: [31mFailure in model dim_product (models\Analystics\dim_product.sql)[0m
+[0m15:41:58.565781 [error] [MainThread]:   Database Error in model dim_product (models\Analystics\dim_product.sql)
+  Syntax error: Trailing comma after the WITH clause before the main query is not allowed at [133:1]
+  compiled code at target\run\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m15:41:58.566343 [info ] [MainThread]: 
+[0m15:41:58.566951 [info ] [MainThread]:   compiled code at target\compiled\wide_world_importers_dbt\models\Analystics\dim_product.sql
+[0m15:41:58.567412 [info ] [MainThread]: 
+[0m15:41:58.567959 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:41:58.569160 [debug] [MainThread]: Command `dbt run` failed at 15:41:58.569044 after 7.37 seconds
+[0m15:41:58.569466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013877DE14F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001387798EDF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001387798F070>]}
+[0m15:41:58.569746 [debug] [MainThread]: Flushing usage events
+[0m15:42:01.627457 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:43:03.855213 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126AF216510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126AD081D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126AFF64190>]}
+
+
+============================== 15:43:03.860125 | 042278a2-753d-407b-9d89-c228656a79c1 ==============================
+[0m15:43:03.860125 [info ] [MainThread]: Running with dbt=1.10.9
+[0m15:43:03.860871 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt run --select dim_product', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'printer_width': '80', 'use_experimental_parser': 'False', 'empty': 'False', 'log_path': 'D:\\data_warehouse_project\\logs', 'indirect_selection': 'eager', 'profiles_dir': 'D:\\data_warehouse_project', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m15:43:07.725571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '042278a2-753d-407b-9d89-c228656a79c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126AF8F0FC0>]}
+[0m15:43:07.785968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '042278a2-753d-407b-9d89-c228656a79c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126CDB2E7A0>]}
+[0m15:43:07.786772 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m15:43:08.690820 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m15:43:08.866593 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m15:43:08.867192 [debug] [MainThread]: Partial parsing: updated file: wide_world_importers_dbt://models\Analystics\dim_product.sql
+[0m15:43:09.090641 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wide_world_importers_dbt.staging
+- models.wide_world_importers_dbt.analytics.role_playing_dimensions
+- models.wide_world_importers_dbt.analytics
+[0m15:43:09.098727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '042278a2-753d-407b-9d89-c228656a79c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126CDB52550>]}
+[0m15:43:09.330754 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m15:43:09.333266 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m15:43:09.367302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '042278a2-753d-407b-9d89-c228656a79c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126CDBBB020>]}
+[0m15:43:09.367777 [info ] [MainThread]: Found 7 models, 875 macros
+[0m15:43:09.368425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '042278a2-753d-407b-9d89-c228656a79c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126CDD034D0>]}
+[0m15:43:09.369939 [info ] [MainThread]: 
+[0m15:43:09.370547 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:43:09.371035 [info ] [MainThread]: 
+[0m15:43:09.371825 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m15:43:09.373006 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211'
+[0m15:43:09.373397 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:43:09.994169 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_project-github-471211_wide_world_importers_dwh'
+[0m15:43:09.994709 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:43:10.417200 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '042278a2-753d-407b-9d89-c228656a79c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126CE2BF6C0>]}
+[0m15:43:10.418509 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:43:10.462120 [debug] [Thread-1 (]: Began running node model.wide_world_importers_dbt.dim_product
+[0m15:43:10.462609 [info ] [Thread-1 (]: 1 of 1 START sql view model wide_world_importers_dwh.dim_product ............... [RUN]
+[0m15:43:10.463820 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.wide_world_importers_dbt.dim_product'
+[0m15:43:10.464193 [debug] [Thread-1 (]: Began compiling node model.wide_world_importers_dbt.dim_product
+[0m15:43:10.470656 [debug] [Thread-1 (]: Writing injected SQL for node "model.wide_world_importers_dbt.dim_product"
+[0m15:43:10.471518 [debug] [Thread-1 (]: Began executing node model.wide_world_importers_dbt.dim_product
+[0m15:43:10.501960 [debug] [Thread-1 (]: Writing runtime sql for node "model.wide_world_importers_dbt.dim_product"
+[0m15:43:10.503048 [debug] [Thread-1 (]: On model.wide_world_importers_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "wide_world_importers_dbt", "target_name": "dev", "node_id": "model.wide_world_importers_dbt.dim_product"} */
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_product`
+  OPTIONS()
+  as WITH dim_product__resource AS (
+  SELECT 
+    *
+  FROM vit-lam-data.wide_world_importers.warehouse__stock_items
+), 
+
+dim_product__renamed AS (
+  SELECT 
+    stock_item_id AS product_key,
+    stock_item_name AS product_name,
+    brand AS product_brand,
+    size AS product_size,
+    lead_time_days AS product_lead_time,
+    quantity_per_outer AS product_quantity_per_outer,
+    is_chiller_stock AS product_is_chiller_stock,
+    tax_rate AS product_tax_rate,
+    unit_price AS product_unit_price,
+    recommended_retail_price AS product_recommended_retail_price,
+    typical_weight_per_unit AS product_typical_weight_per_unit,
+    marketing_comments AS product_marketing_comments,
+    internal_comments AS product_internal_comments,
+    custom_fields AS product_custom_fields,
+    tags AS product_tags,
+    search_details AS product_search_details,
+    last_edited_by AS producT_last_edited_by,
+    supplier_id AS supplier_key,
+    color_id AS color_key,
+    unit_price AS product_price,
+    recommended_retail_price AS product_rrp,
+    typical_weight_per_unit AS product_weight,
+    marketing_comments AS product_description
+  FROM dim_product__resource
+),
+dim_product_convert__boolean AS (
+  SELECT 
+    *, 
+    CASE 
+      WHEN product_is_chiller_stock IS TRUE THEN 'on_product_is_chiller_stock' 
+      WHEN product_is_chiller_stock IS FALSE THEN 'off_product_is_chiller_stock' 
+      ELSE 'undefined' 
+    END AS product_is_chiller_stock_flag
+  FROM dim_product__renamed
+), 
+dim_product_add_undefined__record AS (
+  SELECT 
+    product_key,
+    product_name,
+    product_brand,
+    product_size,
+    product_lead_time,
+    product_quantity_per_outer,
+    product_is_chiller_stock_flag,
+    product_tax_rate,
+    product_unit_price,
+    product_recommended_retail_price,
+    product_typical_weight_per_unit,
+    product_marketing_comments,
+    product_internal_comments,
+    product_custom_fields,
+    product_tags,
+    product_search_details,
+    producT_last_edited_by,
+    supplier_key,
+    color_key,
+    product_price,
+    product_rrp,
+    product_weight,
+    product_description
+    FROM dim_product_convert__boolean
+
+    UNION ALL
+    SELECT
+    0 AS product_key,
+    'undefined' AS product_name,
+    'undefined' AS product_brand,
+    'undefined' AS product_size,
+    0 AS product_lead_time,
+    0 AS product_quantity_per_outer,
+    'undefined' AS product_is_chiller_stock_flag,
+    0 AS product_tax_rate,
+    0 AS product_unit_price,
+    0 AS product_recommended_retail_price,
+    0 AS product_typical_weight_per_unit,
+    'undefined' AS product_marketing_comments,
+    'undefined' AS product_internal_comments,
+    'undefined' AS product_custom_fields,
+    'undefined' AS product_tags,
+    'undefined' AS product_search_details,
+    0 AS producT_last_edited_by,
+    0 AS supplier_key,
+    0 AS color_key,
+    0 AS product_price,
+    0 AS product_rrp,
+    0 AS product_weight,
+    'undefined' AS product_description
+
+  UNION ALL
+    SELECT
+    -1 AS product_key,
+    'Invalid' AS product_name,
+    'Invalid' AS product_brand,
+    'Invalid' AS product_size,
+    -1 AS product_lead_time,
+    -1 AS product_quantity_per_outer,
+    'undefined' AS product_is_chiller_stock_flag,
+    -1 AS product_tax_rate,
+    -1 AS product_unit_price,
+    -1 AS product_recommended_retail_price,
+    -1 AS product_typical_weight_per_unit,
+    'Invalid' AS product_marketing_comments,
+    'Invalid' AS product_internal_comments,
+    'Invalid' AS product_custom_fields,
+    'Invalid' AS product_tags,
+    'Invalid' AS product_search_details,
+    -1 AS product_last_edited_by,
+    -1 AS supplier_key,
+    -1 AS color_key,
+    -1 AS product_price,
+    -1 AS product_rrp,
+    -1 AS product_weight,
+    'Invalid' AS product_description
+  FROM dim_product_convert__boolean
+)
+SELECT 
+  * 
+FROM 
+  dim_product_add_undefined__record;
+
+
+[0m15:43:10.503672 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:43:11.487618 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-github-471211&j=bq:asia-southeast1:b97e35d3-cbdd-43f2-a82b-3ff21bf2ba7a&page=queryresults
+[0m15:43:14.794246 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '042278a2-753d-407b-9d89-c228656a79c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126CE177AD0>]}
+[0m15:43:14.794992 [info ] [Thread-1 (]: 1 of 1 OK created sql view model wide_world_importers_dwh.dim_product .......... [[32mCREATE VIEW (0 processed)[0m in 4.33s]
+[0m15:43:14.796257 [debug] [Thread-1 (]: Finished running node model.wide_world_importers_dbt.dim_product
+[0m15:43:14.797768 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:43:14.833574 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:43:14.833942 [debug] [MainThread]: Connection 'list_project-github-471211' was properly closed.
+[0m15:43:14.834173 [debug] [MainThread]: Connection 'list_project-github-471211_wide_world_importers_dwh' was properly closed.
+[0m15:43:14.834370 [debug] [MainThread]: Connection 'model.wide_world_importers_dbt.dim_product' was properly closed.
+[0m15:43:14.834630 [info ] [MainThread]: 
+[0m15:43:14.835897 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 5.46 seconds (5.46s).
+[0m15:43:14.836834 [debug] [MainThread]: Command end result
+[0m15:43:14.868661 [debug] [MainThread]: Wrote artifact WritableManifest to D:\data_warehouse_project\target\manifest.json
+[0m15:43:14.871282 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\data_warehouse_project\target\semantic_manifest.json
+[0m15:43:14.878320 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\data_warehouse_project\target\run_results.json
+[0m15:43:14.878698 [info ] [MainThread]: 
+[0m15:43:14.879362 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:43:14.879907 [info ] [MainThread]: 
+[0m15:43:14.880536 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:43:14.881779 [debug] [MainThread]: Command `dbt run` succeeded at 15:43:14.881663 after 11.17 seconds
+[0m15:43:14.882084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126CE4562B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126CDBFE670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126CDBFFED0>]}
+[0m15:43:14.882383 [debug] [MainThread]: Flushing usage events
+[0m15:43:21.247469 [debug] [MainThread]: An error was encountered while trying to flush usage events
