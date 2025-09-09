@@ -1,4 +1,8 @@
-WITH dim_supplier__recored AS (
+
+
+  create or replace view `project-github-471211`.`wide_world_importers_dwh`.`dim_supplier`
+  OPTIONS()
+  as WITH dim_supplier__recored AS (
   SELECT
     *
   FROM vit-lam-data.wide_world_importers.purchasing__suppliers
@@ -70,7 +74,7 @@ SELECT
   dim_supplier.delivery_city_key,
   dim_supplier.postal_city_key
 FROM dim_supplier_add_undifined__record AS dim_supplier
-LEFT JOIN {{ref('stg_supplier_category')}} AS stg_supplier_category
+LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`stg_supplier_category` AS stg_supplier_category
 ON dim_supplier.supplier_category_key = stg_supplier_category.supplier_category_key
 )
 SELECT
@@ -83,4 +87,5 @@ SELECT
   delivery_method_key,
   delivery_city_key,
   postal_city_key
-  FROM dim_supplier_join
+  FROM dim_supplier_join;
+

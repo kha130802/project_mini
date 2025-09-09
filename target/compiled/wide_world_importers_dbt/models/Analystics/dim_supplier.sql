@@ -70,7 +70,7 @@ SELECT
   dim_supplier.delivery_city_key,
   dim_supplier.postal_city_key
 FROM dim_supplier_add_undifined__record AS dim_supplier
-LEFT JOIN {{ref('stg_supplier_category')}} AS stg_supplier_category
+LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`stg_supplier_category` AS stg_supplier_category
 ON dim_supplier.supplier_category_key = stg_supplier_category.supplier_category_key
 )
 SELECT
