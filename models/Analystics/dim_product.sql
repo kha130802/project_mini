@@ -120,8 +120,33 @@ dim_product_add_undefined__record AS (
     -1 AS product_weight,
     'Invalid' AS product_description
   FROM dim_product_convert__boolean
-)
+), dim_product_join AS (
 SELECT 
-  * 
+  dim_product.product_key,
+  dim_product.product_name,
+  dim_product.product_brand,
+  dim_product.product_size,
+  dim_product.product_lead_time,
+  dim_product.product_quantity_per_outer,
+  dim_product.product_is_chiller_stock_flag,
+  dim_product.product_tax_rate,
+  dim_product.product_unit_price,
+  dim_product.product_recommended_retail_price,
+  dim_product.product_typical_weight_per_unit,
+  dim_product.product_marketing_comments,
+  dim_product.product_internal_comments,
+  dim_product.product_custom_fields,
+  dim_product.product_tags,
+  dim_product.product_search_details,
+  dim_product.producT_last_edited_by,
+  dim_product.supplier_key,
+  dim_product.color_key,
+  dim_product.product_price,
+  dim_product.product_rrp,
+  dim_product.product_weight,
+  dim_product.product_description,
+  dim_supplier.supplier_name AS supplier_name,
+  dim_color.color_name AS color_name
 FROM 
-  dim_product_add_undefined__record
+  dim_product_add_undefined__record as dim_product
+)

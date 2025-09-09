@@ -71,11 +71,14 @@ SELECT
   dim_supplier.primary_contact_person_key,
   dim_supplier.alternate_contact_person_key,
   dim_supplier.delivery_method_key,
+  stg_delivery_method.delivery_method_name,
   dim_supplier.delivery_city_key,
   dim_supplier.postal_city_key
 FROM dim_supplier_add_undifined__record AS dim_supplier
 LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`stg_supplier_category` AS stg_supplier_category
 ON dim_supplier.supplier_category_key = stg_supplier_category.supplier_category_key
+LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`stg_dim_delivier_method` AS stg_delivery_method
+ON dim_supplier.delivery_method_key = stg_delivery_method.delivery_method_key
 )
 SELECT
   supplier_key,
@@ -85,6 +88,7 @@ SELECT
   primary_contact_person_key,
   alternate_contact_person_key,
   delivery_method_key,
+  delivery_method_name,
   delivery_city_key,
   postal_city_key
   FROM dim_supplier_join;
