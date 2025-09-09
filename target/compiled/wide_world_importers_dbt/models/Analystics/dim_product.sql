@@ -1,127 +1,203 @@
-WITH dim_product__resource AS (
-  SELECT 
-    *
-  FROM vit-lam-data.wide_world_importers.warehouse__stock_items
-), 
-
-dim_product__renamed AS (
-  SELECT 
-    stock_item_id AS product_key,
-    stock_item_name AS product_name,
-    brand AS product_brand,
-    size AS product_size,
-    lead_time_days AS product_lead_time,
-    quantity_per_outer AS product_quantity_per_outer,
-    is_chiller_stock AS product_is_chiller_stock,
-    tax_rate AS product_tax_rate,
-    unit_price AS product_unit_price,
-    recommended_retail_price AS product_recommended_retail_price,
-    typical_weight_per_unit AS product_typical_weight_per_unit,
-    marketing_comments AS product_marketing_comments,
-    internal_comments AS product_internal_comments,
-    custom_fields AS product_custom_fields,
-    tags AS product_tags,
-    search_details AS product_search_details,
-    last_edited_by AS producT_last_edited_by,
-    supplier_id AS supplier_key,
-    color_id AS color_key,
-    unit_price AS product_price,
-    recommended_retail_price AS product_rrp,
-    typical_weight_per_unit AS product_weight,
-    marketing_comments AS product_description
-  FROM dim_product__resource
-),
-dim_product_convert__boolean AS (
-  SELECT 
-    *, 
-    CASE 
-      WHEN product_is_chiller_stock IS TRUE THEN 'on_product_is_chiller_stock' 
-      WHEN product_is_chiller_stock IS FALSE THEN 'off_product_is_chiller_stock' 
-      ELSE 'undefined' 
-    END AS product_is_chiller_stock_flag
-  FROM dim_product__renamed
-), 
-dim_product_add_undefined__record AS (
-  SELECT 
-    product_key,
-    product_name,
-    product_brand,
-    product_size,
-    product_lead_time,
-    product_quantity_per_outer,
-    product_is_chiller_stock_flag,
-    product_tax_rate,
-    product_unit_price,
-    product_recommended_retail_price,
-    product_typical_weight_per_unit,
-    product_marketing_comments,
-    product_internal_comments,
-    product_custom_fields,
-    product_tags,
-    product_search_details,
-    producT_last_edited_by,
-    supplier_key,
-    color_key,
-    product_price,
-    product_rrp,
-    product_weight,
-    product_description
-    FROM dim_product_convert__boolean
-
-    UNION ALL
-    SELECT
-    0 AS product_key,
-    'undefined' AS product_name,
-    'undefined' AS product_brand,
-    'undefined' AS product_size,
-    0 AS product_lead_time,
-    0 AS product_quantity_per_outer,
-    'undefined' AS product_is_chiller_stock_flag,
-    0 AS product_tax_rate,
-    0 AS product_unit_price,
-    0 AS product_recommended_retail_price,
-    0 AS product_typical_weight_per_unit,
-    'undefined' AS product_marketing_comments,
-    'undefined' AS product_internal_comments,
-    'undefined' AS product_custom_fields,
-    'undefined' AS product_tags,
-    'undefined' AS product_search_details,
-    0 AS producT_last_edited_by,
-    0 AS supplier_key,
-    0 AS color_key,
-    0 AS product_price,
-    0 AS product_rrp,
-    0 AS product_weight,
-    'undefined' AS product_description
-
-  UNION ALL
-    SELECT
-    -1 AS product_key,
-    'Invalid' AS product_name,
-    'Invalid' AS product_brand,
-    'Invalid' AS product_size,
-    -1 AS product_lead_time,
-    -1 AS product_quantity_per_outer,
-    'undefined' AS product_is_chiller_stock_flag,
-    -1 AS product_tax_rate,
-    -1 AS product_unit_price,
-    -1 AS product_recommended_retail_price,
-    -1 AS product_typical_weight_per_unit,
-    'Invalid' AS product_marketing_comments,
-    'Invalid' AS product_internal_comments,
-    'Invalid' AS product_custom_fields,
-    'Invalid' AS product_tags,
-    'Invalid' AS product_search_details,
-    -1 AS product_last_edited_by,
-    -1 AS supplier_key,
-    -1 AS color_key,
-    -1 AS product_price,
-    -1 AS product_rrp,
-    -1 AS product_weight,
-    'Invalid' AS product_description
-  FROM dim_product_convert__boolean
-)
-SELECT 
-  * 
-FROM 
-  dim_product_add_undefined__record
+WITH dim_product__resource AS (
+  SELECT 
+    *
+  FROM vit-lam-data.wide_world_importers.warehouse__stock_items
+), 
+
+dim_product__renamed AS (
+  SELECT 
+    stock_item_id AS product_key,
+    stock_item_name AS product_name,
+    brand AS product_brand,
+    size AS product_size,
+    lead_time_days AS product_lead_time,
+    quantity_per_outer AS product_quantity_per_outer,
+    is_chiller_stock AS product_is_chiller_stock,
+    tax_rate AS product_tax_rate,
+    unit_price AS product_unit_price,
+    recommended_retail_price AS product_recommended_retail_price,
+    typical_weight_per_unit AS product_typical_weight_per_unit,
+    marketing_comments AS product_marketing_comments,
+    internal_comments AS product_internal_comments,
+    custom_fields AS product_custom_fields,
+    tags AS product_tags,
+    search_details AS product_search_details,
+    last_edited_by AS product_last_edited_by,
+    supplier_id AS supplier_key,
+    color_id AS color_key,
+    unit_package_id AS product_unit_package_key,
+    outer_package_id AS product_outer_package_key,
+    unit_price AS product_price,
+    recommended_retail_price AS product_rrp,
+    typical_weight_per_unit AS product_weight,
+    marketing_comments AS product_description
+  FROM dim_product__resource
+),
+dim_product_convert__boolean AS (
+  SELECT 
+    *, 
+    CASE 
+      WHEN product_is_chiller_stock IS TRUE THEN 'on_product_is_chiller_stock' 
+      WHEN product_is_chiller_stock IS FALSE THEN 'off_product_is_chiller_stock' 
+      ELSE 'undefined' 
+    END AS product_is_chiller_stock_flag
+  FROM dim_product__renamed
+), 
+dim_product_add_undefined__record AS (
+  SELECT 
+    product_key,
+    product_name,
+    product_brand,
+    product_size,
+    product_lead_time,
+    product_quantity_per_outer,
+    product_is_chiller_stock_flag,
+    product_tax_rate,
+    product_unit_price,
+    product_recommended_retail_price,
+    product_typical_weight_per_unit,
+    product_marketing_comments,
+    product_internal_comments,
+    product_custom_fields,
+    product_tags,
+    product_search_details,
+    producT_last_edited_by,
+    supplier_key,
+    color_key,
+    product_unit_package_key,
+    product_outer_package_key,
+    product_price,
+    product_rrp,
+    product_weight,
+    product_description
+    FROM dim_product_convert__boolean
+
+    UNION ALL
+    SELECT
+    0 AS product_key,
+    'undefined' AS product_name,
+    'undefined' AS product_brand,
+    'undefined' AS product_size,
+    0 AS product_lead_time,
+    0 AS product_quantity_per_outer,
+    'undefined' AS product_is_chiller_stock_flag,
+    0 AS product_tax_rate,
+    0 AS product_unit_price,
+    0 AS product_recommended_retail_price,
+    0 AS product_typical_weight_per_unit,
+    'undefined' AS product_marketing_comments,
+    'undefined' AS product_internal_comments,
+    'undefined' AS product_custom_fields,
+    'undefined' AS product_tags,
+    'undefined' AS product_search_details,
+    0 AS producT_last_edited_by,
+    0 AS supplier_key,
+    0 AS color_key,
+    0 AS product_unit_package_key,
+    0 AS product_outer_package_key,
+    0 AS product_price,
+    0 AS product_rrp,
+    0 AS product_weight,
+    'undefined' AS product_description
+
+  UNION ALL
+    SELECT
+    -1 AS product_key,
+    'Invalid' AS product_name,
+    'Invalid' AS product_brand,
+    'Invalid' AS product_size,
+    -1 AS product_lead_time,
+    -1 AS product_quantity_per_outer,
+    'undefined' AS product_is_chiller_stock_flag,
+    -1 AS product_tax_rate,
+    -1 AS product_unit_price,
+    -1 AS product_recommended_retail_price,
+    -1 AS product_typical_weight_per_unit,
+    'Invalid' AS product_marketing_comments,
+    'Invalid' AS product_internal_comments,
+    'Invalid' AS product_custom_fields,
+    'Invalid' AS product_tags,
+    'Invalid' AS product_search_details,
+    -1 AS product_last_edited_by,
+    -1 AS supplier_key,
+    -1 AS color_key,
+    -1 AS product_unit_package_key,
+    -1 AS product_outer_package_key,
+    -1 AS product_price,
+    -1 AS product_rrp,
+    -1 AS product_weight,
+    'Invalid' AS product_description
+  FROM dim_product_convert__boolean
+), dim_product_join AS (
+SELECT 
+  dim_product.product_key,
+  dim_product.product_name,
+  dim_product.product_brand,
+  dim_product.product_size,
+  dim_product.product_lead_time,
+  dim_product.product_quantity_per_outer,
+  dim_product.product_is_chiller_stock_flag,
+  dim_product.product_tax_rate,
+  dim_product.product_unit_price,
+  dim_product.product_recommended_retail_price,
+  dim_product.product_typical_weight_per_unit,
+  dim_product.product_marketing_comments,
+  dim_product.product_internal_comments,
+  dim_product.product_custom_fields,
+  dim_product.product_tags,
+  dim_product.product_search_details,
+  dim_product.product_last_edited_by,
+  dim_product.supplier_key,
+  dim_supplier.supplier_name,
+  dim_product.color_key,
+  dim_color.color_name,
+  dim_product.product_unit_package_key,
+  dim_unitpackage.unit_package_name,
+  dim_product.product_outer_package_key,
+  dim_unitpackage.outer_package_name,
+  dim_product.product_price,
+  dim_product.product_rrp,
+  dim_product.product_weight,
+  dim_product.product_description
+FROM 
+  dim_product_add_undefined__record as dim_product
+LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`dim_supplier` AS dim_supplier
+ON dim_product.supplier_key = dim_supplier.supplier_key
+LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`stg_dim_color` AS dim_color
+ON dim_product.color_key = dim_color.color_key
+LEFT JOIN `project-github-471211`.`wide_world_importers_dwh`.`stg_dim_unitpackage` AS dim_unitpackage
+ON dim_product.product_unit_package_key = dim_unitpackage.unit_package_key
+AND dim_product.product_outer_package_key = dim_unitpackage.unit_package_key
+)
+SELECT 
+    product_key,
+    product_name,
+    product_brand,
+    product_size,
+    product_lead_time,
+    product_quantity_per_outer,
+    product_is_chiller_stock_flag,
+    product_tax_rate,
+    product_unit_price,
+    product_recommended_retail_price,
+    product_typical_weight_per_unit,
+    product_marketing_comments,
+    product_internal_comments,
+    product_custom_fields,
+    product_tags,
+    product_search_details,
+    product_last_edited_by,
+    supplier_key,
+    supplier_name,
+    color_key,
+    product_unit_package_key,
+    unit_package_name,
+    product_outer_package_key,
+    outer_package_name,
+    color_name,
+    product_price,
+    product_rrp,
+    product_weight,
+    product_description
+  FROM 
+    dim_product_join
